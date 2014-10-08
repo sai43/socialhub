@@ -1,0 +1,636 @@
+Searching 3914 files for "diaspora " (case sensitive)
+
+/home/gopi/Development/diaspora/Changelog.md:
+   82  ## Rake task to email users
+   83  
+   84: There is a new Rake task `podmin:admin_mail` available to allow podmins to easily send news and notices to users. The rake task triggers emails via the normal diaspora mailer mechanism (so they are embedded in the standard template) and takes the following parameters:
+   85  
+   86  1) Users definition
+
+/home/gopi/Development/diaspora/app/assets/stylesheets/footer.css.scss:
+   12    }
+   13  
+   14:   .branding-powered_by_diaspora {
+   15      display: inline-block;
+   16      margin-top: 3px;
+
+/home/gopi/Development/diaspora/app/models/profile.rb:
+   63  
+   64    def diaspora_handle
+   65:     #get the parent diaspora handle, unless we want to access a profile without a person
+   66      (self.person) ? self.person.diaspora_handle : self[:diaspora_handle]
+   67    end
+
+/home/gopi/Development/diaspora/config/locales/diaspora/bg.yml:
+  537        your_public_profile: "Вашият публичен профил"
+  538        your_tags: "Опишете се с до 5 #думи (марки)"
+  539:       your_tags_placeholder: "например: #България #diaspora #фитнес #музика #котки"
+  540      update:
+  541        failed: "Профилът не бе обновен"
+  ...
+  835        community_welcome: "Общността около Diaspora с радост Ви приветства на борда!"
+  836        hashtag_explanation: "Диез марките (#име–на-марката) ви позволяват да коментирате и следите интересни за вас теми.  Улесняват и откриване на хора със сходни интереси в Diaspora."
+  837:       hashtag_suggestions: "Пробвайте да следвате няколко марки като #България #diaspora #фитнес и др."
+  838        saved: "Записано!"
+  839        well_hello_there: "Здравейте!"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/bs.yml:
+  816    services:
+  817      create:
+  818:       already_authorized: "Korisnik sa diaspora id-om %{diaspora_id} je već autorizirao taj %{service_name} račun."
+  819        failure: "Autentikacija neuspješna."
+  820        read_only_access: "Pristupni nivo je samo za čitanje, molimo pokušajte autorizirati kasnije ponovo"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/cs.yml:
+  367        who_sees_post_a: "Pokud vytvoříte omezený příspěvek, bude viditelný jen lidem, které máte v tomto aspektu (nebo aspektech, pokud je určen několika aspektům). Vaše kontakty, které nejsou v tomto aspektu, příspěvek neuvidí, pokud jste ho neudělal(a) veřejným. Vždy jen veřejné příspěvky budou viditelné těm, které jste nezařadil(a) do vašich aspektů."
+  368        who_sees_post_q: "Když posílám do určitého aspektu, kdo to vidí?"
+  369:     foundation_website: "webové stránky diaspora foundation"
+  370      getting_help:
+  371        get_support_a_hashtag: "zeptej se ve veřejném příspěvku na diaspoře* použitím hashtagu %{question}"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/cy.yml:
+   42        diaspora_id:
+   43          heading: "ID Diaspora"
+   44:       handle_explanation: "This is your diaspora handle.  Like an email address, you can give this to people to reach you."
+   45        help:
+   46          do_you: "Ydych chi:"
+   ..
+  333        your_photo: "Eich ffoto"
+  334        your_tags: "You: in 5 #tags"
+  335:       your_tags_placeholder: "i.e. #diaspora #ironing #kittens #music"
+  336    reactions:
+  337      few: "%{count} reactions"
+  ...
+  505        receive_email_notifications: "Receive email notificaions?"
+  506        reshared: "...rhywun yn rhannu eich post?"
+  507:       your_handle: "Your diaspora handle"
+  508      privacy_settings:
+  509        title: "Gosodiadau preifatrwydd"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/da.yml:
+  432        back_to_top_a: "Ja. Når du har rullet en hel side ned kan du klikke på den grå pil der vises i nederste højre hjørne af browservinduet."
+  433        back_to_top_q: "Er der en hurtig måde at gå tilbage til toppen af siden når jeg har rullet ned?"
+  434:       diaspora_app_a: "Der er flere Android-apps under udvikling. Flere er forladte projekter og fungerer derfor ikke godt sammen med den aktuelle version af diaspora *. Forvent ikke meget af disse apps. I øjeblikket er den bedste måde at få adgang til diaspora * fra din mobile enhed, gennem en browser, fordi vi har udviklet en mobil version af hjemmesiden, som bør virke godt på alle enheder. Der er i øjeblikket ingen app til iOS. Igen bør diaspora * fungere fint via din browser."
+  435        diaspora_app_q: "Findes der en Diaspora*-app til Android eller IOS?"
+  436        photo_albums_a: "Nej, ikke i øjeblikket. Men du kan se en strøm af deres uploadede billeder fra fotosektionen i sidekolonnen af deres profilside."
+  ...
+  492        who_sees_updates_q: "Hvem kan se når jeg opdaterer min private profil?"
+  493      public_posts:
+  494:       can_comment_reshare_like_a: "Enhver der er logget på diaspora * kan kommentere, videredele eller like dine offentlige indlæg."
+  495        can_comment_reshare_like_q: "Hvem kan kommentere, videredele eller like mine offentlige indlæg?"
+  496        deselect_aspect_posting_a: "Det påvirker ikke offentlige indlæg at fravælge aspekter. Det vil stadig være synligt i strømmen hos alle dine kontakter. For at begrænse adgangen til specifikke aspekter, skal du vælge de aspekter du ønsker skal kunne se indlægget med knapperne under indlægget"
+  ...
+  498        find_public_post_a: "Dine offentlige indlæg vises i strømmen hos alle der følger dig. Hvis du har inkluderet #tags i dine offentlige indlæg, vil enhver der følger disse tags kunne se dit indlæg i deres strøm. Hvert offentligt indlæg har også en specifik webadresse som alle kan se selvom de er ikke logget ind - og dermed kan man linke offentlige indlæg direkte fra Twitter, blogs osv. Offentlige indlæg bliver også indekseret af søgemaskiner."
+  499        find_public_post_q: "Hvordan kan folk finde mine offentlige indlæg?"
+  500:       see_comment_reshare_like_a: "Enhver der er logget på diaspora * og andre på internettet. Kommentarer, likes og videredelinger af offentlige indlæg er også offentlige."
+  501        see_comment_reshare_like_q: "Når jeg kommenterer, videredeler eller liker en offentlig post, Hvem kan så se det?"
+  502        title: "Offentlige indlæg"
+  ...
+  538        title: "Deling"
+  539      tags:
+  540:       filter_tags_a: "Dette er endnu ikke tilgængelig direkte via diaspora *, men der er blevet skrevet %{third_party_tools} som kan tilbyde dette."
+  541        filter_tags_q: "Hvordan kan jeg filtrere/fjerne tags fra min strøm?"
+  542        followed_tags_a: "Når du har søgt efter et tag, kan du klikke på knappen øverst på tag-siden for at \"følge\" det tag. Det vil herefter blive vist i din liste over #Fulgte tags til venstre. Hvis du klikker på en af ​​dine #Fulgte tags kommer du til det tags side, hvor du kan se de seneste indlæg der indeholder dette tag. Klik på #Fulgte tags for at se en strøm med indlæg, der omfatter et eller flere af ​​dine #Fulgte tags. "
+  ...
+  936        your_public_profile: "Din offentlige profil"
+  937        your_tags: "Beskriv dig selv i fem ord"
+  938:       your_tags_placeholder: "som #diaspora #strygning #kattekillinger #musik #hacking"
+  939      update:
+  940        failed: "Kunne ikke opdatere profil"
+  ...
+ 1032    services:
+ 1033      create:
+ 1034:       already_authorized: "En bruger med diaspora ID %{diaspora_id} har allerede godkendt den %{service_name} konto."
+ 1035        failure: "Godkendelse mislykkedes."
+ 1036        read_only_access: "Access-niveau er skrivebeskyttet, så prøv at godkende igen senere"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/el.yml:
+  760    services:
+  761      create:
+  762:       already_authorized: "Ένας χρήστης με diaspora αναγνωριστικό %{diaspora_id} έχει ήδη εξουσιοδοτήσει αυτόν τον %{service_name} λογαριασμό."
+  763        failure: "Αποτυχία πιστοποίησης."
+  764        read_only_access: "Τα δικαιώματα πρόσβασης είναι μόνο για ανάγνωση, παρακαλώ προσπαθήστε να λάβετε εξουσιοδότηση ξανά αργότερα"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/en.yml:
+  400      markdown: "Markdown"
+  401      here: "here"
+  402:     foundation_website: "diaspora foundation website"
+  403      third_party_tools: "third party tools"
+  404      getting_started_tutorial: "'Getting started' tutorial series"
+  ...
+ 1042        success: "Authentication successful."
+ 1043        failure: "Authentication failed."
+ 1044:       already_authorized: "A user with diaspora id %{diaspora_id} already authorized that %{service_name} account."
+ 1045        read_only_access: "Access level is read-only, please try to authorize again later"
+ 1046      destroy:
+
+/home/gopi/Development/diaspora/config/locales/diaspora/en_pirate.yml:
+   48        aspect_not_empty: "Crew not empty"
+   49      index:
+   50:       handle_explanation: "This is yer diaspora id. Like an email address, you can give this to scallywags to reach you."
+   51        help:
+   52          here_to_help: "Diaspora community is here to help!"
+   ..
+  329        close_account:
+  330          what_we_delete: "We scuttle all of yer posts, profile data, as soon as humanly possible. Yer comments will hang around, but be associated with yer Diaspora Handle."
+  331:       your_handle: "Yer diaspora id"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/en_shaw.yml:
+  507        your_public_profile: "𐑿𐑼 𐑐𐑳𐑚𐑤𐑦𐑒 𐑐𐑮𐑴𐑓𐑲𐑤"
+  508        your_tags: "𐑛𐑦𐑕𐑒𐑮𐑲𐑚 𐑿𐑼𐑕𐑧𐑤𐑓 𐑦𐑯 5 𐑢𐑻𐑛𐑟"
+  509:       your_tags_placeholder: "𐑤𐑲𐑒 #diaspora #ironing #kittens #music #newyork"
+  510      update:
+  511        failed: "𐑓𐑱𐑤𐑛 𐑑 𐑳𐑐𐑛𐑱𐑑 𐑐𐑮𐑴𐑓𐑲𐑤"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/es.yml:
+  891        last_name: "Apellidos"
+  892        nsfw_check: "Marcar todo lo que comparto como NSFW ('no es seguro para el trabajo)."
+  893:       nsfw_explanation: "\"No es seguro para el trabajo\" (NSFW-'not safe for work') es un estándar de la comunidad de diaspora autónomo para el contenido que puede no ser adecuado para ver mientras estas trabajando. Si planeas compartir este material con frecuencia, por favor marca esta opción para que todo lo que compartas esté escondido para las personas comunes a menos que ellos elijan verlas."
+  894        nsfw_explanation2: "Si eliges no marcar esta opción, por favor agrega la etiqueta #nsfw cada vez que compartas un material de este tipo."
+  895        update_profile: "Actualizar perfil"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/eu.yml:
+  746    services:
+  747      create:
+  748:       already_authorized: "%{diaspora_id} diaspora id duen erabiltzaileak jadanik baimendu du %{service_name}(eko) kontu hori."
+  749        failure: "Autentikazioak huts egin du."
+  750        success: "Egiaztapena arrakastaz egina."
+
+/home/gopi/Development/diaspora/config/locales/diaspora/fi.yml:
+  395        who_sees_post_a: "Jos teet rajoitetun julkaisun sen näkevät vain henkilöt, jotka olet sijoittanut kyseiseen näkymään (tai näkymiin). Henkilöt, jotka eivät kuulu kyseiseen näkymään, eivät voi mitenkään nähdä sellaista julkaisua ellet ole tehnyt siitä julkista. Vain julkiset julkaisut ovat sellaisten henkilöiden nähtävillä, jotka eivät kuulu mihinkään näkymistäsi."
+  396        who_sees_post_q: "Kun julkaisen näkymälle kuka voi nähdä sen?"
+  397:     foundation_website: "diaspora säätiön kotisivu"
+  398      getting_help:
+  399        get_support_a_hashtag: "kysy Diasporassa* julkisessa julkaisussa käyttämällä %{question} tagia"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/fil.yml:
+   76        aspect_not_empty: "Crew not empty"
+   77      index:
+   78:       handle_explanation: "This is your diaspora id. Like an email address, you can give this to people to reach you."
+   79        help:
+   80          here_to_help: "Diaspora community is here to help!"
+   ..
+  367        close_account:
+  368          what_we_delete: "We delete all of your posts, profile data, as soon as humanly possible. Your comments will hang around, but be associated with your Diaspora Handle."
+  369:       your_handle: "Your diaspora id"
+  370    webfinger:
+  371      fetch_failed: "hindi nakuha ang webfinger profile para sa %{profile_url}"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/fr.yml:
+ 1010    services:
+ 1011      create:
+ 1012:       already_authorized: "Un utilisateur dont l'id diaspora est %{diaspora_id} a déjà autorisé ce compte %{service_name}."
+ 1013        failure: "L'authentification a échoué."
+ 1014        read_only_access: "Accès en lecture seule, veuillez réessayer d'autoriser plus tard"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/hu.yml:
+  731        no_results: "Hé! Valamit keresned kell."
+  732        results_for: "A keresési szűrőnek (%{search_term}) megfelelt felhasználók"
+  733:       search_handle: "Hogy biztosan megtaláld a barátaidat, használd a diaspora azonosítójukat (felhasználónév@pod.tld)."
+  734        searching: "keresés folyamatban, légy türelmes..."
+  735        send_invite: "Még mindig semmi? Küldj meghívót!"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/id.yml:
+   99          heading: "ID diaspora*"
+  100        donate: "Donasi"
+  101:       handle_explanation: "This is your diaspora handle.  Like an email address, you can give this to people to reach you."
+  102        help:
+  103          do_you: "Apakah kamu:"
+  ...
+  549      edit:
+  550        your_tags: "You: in 5 #tags"
+  551:       your_tags_placeholder: "i.e. #diaspora #ironing #kittens #music"
+  552    public: "Umum"
+  553    reactions:
+  ...
+  686        new_password: "New Password"
+  687        receive_email_notifications: "Receive email notificaions?"
+  688:       your_handle: "Your diaspora handle"
+  689      update:
+  690        email_notifications_changed: "Language Change Failed"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/is.yml:
+  549        your_photo: "Mynd þín"
+  550        your_tags: "You: in 5 #tags"
+  551:       your_tags_placeholder: "i.e. #diaspora #ironing #kittens #music"
+  552      update:
+  553        failed: "Ekki tókst að uppfæra síðuna mína"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/it.yml:
+  358        who_sees_post_a: "Se crei un post privato, sarà visibile solamente alle persone negli aspetti che avrai scelto. I contatti che non sono nell'aspetto o negli aspetti scelti non avranno modo di vedere il post, a meno che non sia pubblico. Solo i post pubblici saranno visibili da tutti coloro che non hai messo in nessun aspetto."
+  359        who_sees_post_q: "Quando pubblico un contenuto ad un aspetto, chi lo vede?"
+  360:     foundation_website: "Sito web diaspora foundation"
+  361      getting_help:
+  362        get_support_a_hashtag: "Invia la domanda in un post pubblico in diaspora* usando %{question} come hashtag"
+  ...
+  417        title: "I post"
+  418      private_posts:
+  419:       can_comment_a: "Solo gli utenti loggati in diaspora che hai inserito in questo aspect possono commentare o apprezzare il tuo post privato"
+  420        can_comment_q: "Chi può commentare o apprezzare il mio post privato?"
+  421        can_reshare_a: "Nessuno. I post privati non sono ri-condivisibili. Gli utenti loggati in diaspora* in quell'Aspetto, tuttavia, possono potenzialmente copiarli e incollarli."
+  ...
+  901    services:
+  902      create:
+  903:       already_authorized: "L'account %{service_name} specificato è già stato autorizzato dall'utente diaspora con ID %{diaspora_id}."
+  904        failure: "Autenticazione fallita."
+  905        read_only_access: "L'accesso ai dati è in sola lettura, per favore riprova ad autorizzare più tardi"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/ja.yml:
+  599        your_public_profile: "公開プロフィール"
+  600        your_tags: "自分を表す５つの#タグ"
+  601:       your_tags_placeholder: "例：#diaspora #kaji #nyanko #ongaku"
+  602      update:
+  603        failed: "プロフィール更新に失敗しました"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/ka.yml:
+  103          heading: "Diaspora ID"
+  104        donate: "ფულის შეწირვა"
+  105:       handle_explanation: "This is your diaspora id. Like an email address, you can give this to people to reach you."
+  106        help:
+  107          do_you: "თქვენ:"
+  ...
+  646    services:
+  647      create:
+  648:       already_authorized: "A user with diaspora id %{diaspora_id} already authorized that %{service_name} account."
+  649        failure: "აუტენტიფიკაცია ვერ მოხერხდა."
+  650        success: "აუტენტიფიკაცია წარმატებით დასრულდა."
+
+/home/gopi/Development/diaspora/config/locales/diaspora/lt.yml:
+  487      edit:
+  488        your_tags: "You: in 5 #tags"
+  489:       your_tags_placeholder: "i.e. #diaspora #ironing #kittens #music"
+  490    public: "Viešas"
+  491    reactions:
+
+/home/gopi/Development/diaspora/config/locales/diaspora/mk.yml:
+   67      index:
+   68        donate: "Донирај"
+   69:       handle_explanation: "Ова е вашето diaspora корисничко име. Исто како е-маил адреса, можете да го давате на луѓе за да се сврзат со вас."
+   70        help:
+   71          do_you: "Дали"
+   ..
+  416      edit:
+  417        your_tags: "You: in 5 #tags"
+  418:       your_tags_placeholder: "i.e. #diaspora #ironing #kittens #music"
+  419    public: "Јавно"
+  420    reactions:
+  ...
+  583        receive_email_notifications: "Receive email notificaions?"
+  584        your_email: "Вашиот е-маил"
+  585:       your_handle: "Вашето diaspora корисничко име"
+  586      public:
+  587        does_not_exist: "Корисникот %{username} не постои!"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/ml.yml:
+  862    services:
+  863      create:
+  864:       already_authorized: "A user with diaspora id %{diaspora_id} already authorized that %{service_name} account."
+  865        failure: "Authentication failed."
+  866        read_only_access: "പ്രവേശനതലം വായിക്കാൻ മാത്രമുള്ളതാണ്, ദയവായി അംഗീകാരം നല്‍കാൻ കുറച്ചു കഴിഞ്ഞ് ശ്രമിക്കുക"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/ms.yml:
+   74          heading: "ID Diaspora"
+   75        donate: "Derma"
+   76:       handle_explanation: "Ini adalah diaspora id anda. Seperti alamat e-mel, anda boleh memberikan orang-orang ini untuk mencapai anda."
+   77        help:
+   78          do_you: "Adakah anda:"
+   ..
+  413        close_account:
+  414          what_we_delete: "We delete all of your posts, profile data, as soon as humanly possible. Your comments will hang around, but be associated with your Diaspora Handle."
+  415:       your_handle: "Your diaspora id"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/nb.yml:
+  938        your_public_profile: "Din offentlige profil"
+  939        your_tags: "Deg: i 5 #tagger"
+  940:       your_tags_placeholder: "f.eks. #diaspora #matlaging #skiskyting #musikk"
+  941      update:
+  942        failed: "Kunne ikke oppdatere profil"
+  ...
+ 1034    services:
+ 1035      create:
+ 1036:       already_authorized: "En bruker med diaspora id %{diaspora_id} har alllerede autorisert denne %{service_name} kontoen."
+ 1037        failure: "Autentisering gikk galt."
+ 1038        read_only_access: "Tilgangsnivå er kun lesing, prøv igjen senere."
+
+/home/gopi/Development/diaspora/config/locales/diaspora/nl.yml:
+  393        who_sees_post_a: "Als je een 'beperkt' bericht plaatst, is het alleen zichtbaar voor de mensen die je in dat aspect (of die aspecten als je meer aspecten hebt gekozen) hebt gestopt. Contactpersonen die niet in het betreffende aspect zitten, zullen het bericht niet kunnen zien, tenzij je het een openbaar bericht maakt. Alleen openbare berichten zijn ook zichtbaar voor mensen die niet in je aspect(en) zitten."
+  394        who_sees_post_q: "Als ik een bericht plaats voor een aspect, wie ziet dat dan?"
+  395:     foundation_website: "diaspora foundation website"
+  396      getting_help:
+  397        get_support_a_hashtag: "zet de vraag in een openbaar bericht op diaspora* met de %{question} hashtag"
+  ...
+  935        your_public_profile: "Je openbare profiel"
+  936        your_tags: "Jezelf: in 5 #tags"
+  937:       your_tags_placeholder: "b.v. #diaspora #strijken #kittens #muziek"
+  938      update:
+  939        failed: "Profiel bijwerken mislukt"
+  ...
+ 1031    services:
+ 1032      create:
+ 1033:       already_authorized: "Een gebruiker met diaspora id %{diaspora_id} heeft dat %{service_name} account al geauthoriseerd."
+ 1034        failure: "Authentificatie mislukt."
+ 1035        read_only_access: "Alleen-lezen toegang, probeer later nogmaals in te loggen"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/pa.yml:
+   34        remove: "ਹਟਾਓ"
+   35      index:
+   36:       handle_explanation: "This is your diaspora handle. Like an email address, you can give this to people to reach you."
+   37        help:
+   38          here_to_help: "Diaspora community is here to help!"
+   ..
+  260      edit:
+  261        your_tags: "You: in 5 #tags"
+  262:       your_tags_placeholder: "i.e. #diaspora #ironing #kittens #music"
+  263    reactions:
+  264      few: "%{count} reactions"
+  ...
+  399        new_password: "New Password"
+  400        receive_email_notifications: "Receive email notificaions?"
+  401:       your_handle: "Your diaspora handle"
+  402      update:
+  403        language_changed: "ਭਾਸ਼ਾ ਬਦਲੀ ਗਈ"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/pt-BR.yml:
+  925        your_public_profile: "Seu perfil público"
+  926        your_tags: "Descreva você mesmo em 5 #tags"
+  927:       your_tags_placeholder: "Ex: #diaspora #cinema #musica #cafe"
+  928      update:
+  929        failed: "Falhou ao atualizar o perfil."
+
+/home/gopi/Development/diaspora/config/locales/diaspora/pt-PT.yml:
+  869    services:
+  870      create:
+  871:       already_authorized: "Um utilizador com o id diaspora %{diaspora_id} já autorizou essa %{service_name} conta."
+  872        failure: "A autenticação falhou."
+  873        read_only_access: "O nível de acesso é só-de-leitura, por favor, tente autorizar de novo mais tarde"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/ro.yml:
+   98          heading: "ID-ul tău pe diaspora*"
+   99        donate: "Donează"
+  100:       handle_explanation: "This is your diaspora handle.  Like an email address, you can give this to people to reach you."
+  101        help:
+  102          do_you: "Tu:"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/sl.yml:
+  750    services:
+  751      create:
+  752:       already_authorized: "Uporabnik z diaspora id %{diaspora_id} je že dovolil ta %{service_name} račun."
+  753        failure: "Preverjanje istovetnosti ni uspelo."
+  754        success: "Preverjanje istovetnosti je uspelo."
+
+/home/gopi/Development/diaspora/config/locales/diaspora/tr.yml:
+  344        who_sees_post_a: "Sınırlı gönderi yaparsanız, yalnızca o bakış(lar)a koyduğunuz kişilere görünür olacaktır. Bunun dışındakiler, gönderinizi açmadığınız sürece hiçbir şekilde onu göremeyeceklerdir. Yalnızca genel gönderiler hiçbir bakışa koymadığınız kişilere açıktır."
+  345        who_sees_post_q: "Bir bakışa gönderdiğimde onu kimler görür?"
+  346:     foundation_website: "diaspora vakfı web sitesi"
+  347      getting_help:
+  348        get_support_a_hashtag: "%{question} etiketini kullanarak diaspora* üzerinde açık bir gönderiyle sorun"
+  ...
+  749        your_public_profile: "Genel profil"
+  750        your_tags: "Kendini 5 kelime ile anlat"
+  751:       your_tags_placeholder: "#diaspora #ironing #kittens #music gibi"
+  752      update:
+  753        failed: "Profil güncellemesi başarısız"
+  ...
+  825    services:
+  826      create:
+  827:       already_authorized: "%{diaspora_id} diaspora kimliği bulunan bir kullanıcı zaten %{service_name} hesabına izin verdi."
+  828        failure: "Kimlik doğrulama başarısız oldu."
+  829        read_only_access: "Erişim düzeyi sadece okumaya izin veriyor, lütfen daha sonra tekrar onaylanmayı deneyin."
+
+/home/gopi/Development/diaspora/config/locales/diaspora/ur-PK.yml:
+  374        close_account:
+  375          what_we_delete: "We delete all of your posts, profile data, as soon as humanly possible. Your comments will hang around, but be associated with your Diaspora Handle."
+  376:       your_handle: "Your diaspora id"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/vi.yml:
+  137          heading: "ID Diaspora"
+  138        donate: "Quyên góp"
+  139:       handle_explanation: "Đây là id diaspora của bạn. Giống như một địa chỉ thư điện tử, người khác có thể liên lạc với bạn thông qua nó."
+  140        help:
+  141          any_problem: "Có vấn đề?"
+  ...
+  679    services:
+  680      create:
+  681:       already_authorized: "Một người dùng với id diaspora %{diaspora_id} đã xác thực với tài khoản %{service_name}."
+  682        failure: "Xác thực thất bại."
+  683        success: "Xác thực thành công."
+
+/home/gopi/Development/diaspora/config/locales/diaspora/zh-CN.yml:
+  587        your_public_profile: "您的公开档案"
+  588        your_tags: "用五个#标签 描述您自己"
+  589:       your_tags_placeholder: "比如 #diaspora #烫发 #猫咪 #音乐"
+  590      update:
+  591        failed: "个人档案更新失败"
+
+/home/gopi/Development/diaspora/config/locales/diaspora/zh-TW.yml:
+  993        stream_preferences: "流水帳偏好設定"
+  994        your_email: "你的電子郵件"
+  995:       your_handle: "你的 diaspora 識別碼"
+  996      getting_started:
+  997        awesome_take_me_to_diaspora: "帥！帶我去 diaspora* 吧"
+
+/home/gopi/Development/diaspora/features/desktop/aspect_navigation.feature:
+    2  Feature: Aspect navigation on the left menu
+    3      In order to filter posts visibility and post targeting
+    4:     As a diaspora user
+    5      I want to use the aspect navigation menu
+    6  
+
+/home/gopi/Development/diaspora/features/desktop/logged_out_browsing.feature:
+    1  @javascript
+    2  Feature: Browsing Diaspora as a logged out user
+    3:     In order to view public diaspora content
+    4      as a random internet user
+    5      I want to view public pages
+
+/home/gopi/Development/diaspora/features/mobile/logged_out_browsing.feature:
+    1  @javascript
+    2  Feature: Browsing Diaspora as a logged out user mobile
+    3:     In order to view public diaspora content
+    4      as a random internet user
+    5      I want to view public post and comments
+
+/home/gopi/Development/diaspora/lib/postzord/dispatcher.rb:
+   26    def self.build(user, object, opts={})
+   27      unless object.respond_to? :to_diaspora_xml
+   28:       raise 'This object does not respond_to? to_diaspora xml.  Try including Diaspora::Federated::Base into your object'
+   29      end
+   30  
+
+/home/gopi/Development/diaspora/lib/salmon/slap.rb:
+   71        @xml =<<ENTRY
+   72      <?xml version='1.0' encoding='UTF-8'?>
+   73:     <diaspora xmlns="https://joindiaspora.com/protocol" xmlns:me="http://salmon-protocol.org/ns/magic-env">
+   74        #{header(person)}
+   75        #{@magic_sig.to_xml}
+
+/home/gopi/Development/diaspora/script/install/setup:
+  160    database_setup
+  161  
+  162:   # diaspora config
+  163    log_inf "copying diaspora.yml.example to diaspora.yml"
+  164    run_or_error "cp config/diaspora.yml.example config/diaspora.yml"
+
+/home/gopi/Development/diaspora/spec/controllers/people_controller_spec.rb:
+   38  
+   39      describe 'via html' do
+   40:       context 'query is a diaspora ID' do
+   41          before do
+   42            @unsearchable_eugene = FactoryGirl.create(:person, :diaspora_handle => "eugene@example.org",
+   ..
+   65        end
+   66  
+   67:       context 'query is not a tag or a diaspora ID' do
+   68          it 'assigns hashes' do
+   69            get :index, :q => "Korth"
+
+/home/gopi/Development/diaspora/spec/controllers/posts_controller_spec.rb:
+   86          end
+   87  
+   88:         it 'responds with diaspora xml if format is xml' do
+   89            get :show, :id => @status.guid, :format => :xml
+   90            expect(response.body).to eq(@status.to_diaspora_xml)
+
+/home/gopi/Development/diaspora/spec/controllers/profiles_controller_spec.rb:
+  157        end
+  158  
+  159:       it 'diaspora handle' do
+  160          put :update, @profile_params
+  161          expect(Person.find(eve.person.id).profile[:diaspora_handle]).not_to eq('abc@a.com')
+
+/home/gopi/Development/diaspora/spec/controllers/services_controller_spec.rb:
+   56        end
+   57  
+   58:       it 'flashes an already_authorized error with the diaspora handle for the user'  do
+   59          post :create, :provider => 'twitter'
+   60          expect(flash[:error].include?(user.profile.diaspora_handle)).to be true
+
+/home/gopi/Development/diaspora/spec/controllers/tags_controller_spec.rb:
+    9      before do
+   10        sign_in :user, alice
+   11:       bob.profile.tag_string = "#cats #diaspora #rad"
+   12        bob.profile.build_tags
+   13        bob.profile.save!
+
+/home/gopi/Development/diaspora/spec/fixtures/public_posts.json:
+    1: [{"id":15086,"guid":"198095988ad26f21","text":"test of #left4dead on #linux results in \"faster zombies\" http://is.gd/uHeUC6 with linux outperforming windows","public":true,"created_at":"2012-08-02T22:13:16Z","interacted_at":"2012-08-03T15:02:59Z","provider_display_name":null,"post_type":"Reshare","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"o_embed_cache":null,"mentioned_people":[],"photos":[],"frame_name":"status","root":{"id":15028,"guid":"1b2a98db23582947","text":"test of #left4dead on #linux results in \"faster zombies\" http://is.gd/uHeUC6 with linux outperforming windows","public":true,"created_at":"2012-08-02T14:25:56Z","interacted_at":"2012-08-02T21:54:53Z","provider_display_name":null,"post_type":"StatusMessage","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":1769,"guid":"a2f9a3a7cb3dcd5a","name":"el [spare pope] olmo","diaspora_id":"el_olmo@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_343f6520778765c4b3f9.jpg","medium":"https://pod.fulll.name/uploads/images/thumb_medium_343f6520778765c4b3f9.jpg","large":"https://pod.fulll.name/uploads/images/thumb_large_343f6520778765c4b3f9.jpg"}},"o_embed_cache":null,"mentioned_people":[],"photos":[],"frame_name":"status","root":null,"title":"test of #left4dead on #linux results in \"faster zombies\" http://is.gd/uHeUC6 with linux outperforming windows","next_post":"/posts/15028/next","previous_post":"/posts/15028/previous","interactions":{"likes":[{"id":32638,"guid":"b2c1e789b1eec9ea","author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"created_at":"2012-08-02T21:54:53Z"}],"reshares":[{"reshare":{"actor_url":null,"author_id":2,"comments_count":0,"created_at":"2012-08-02T22:13:16Z","diaspora_handle":"raven24@pod.fulll.name","favorite":false,"frame_name":null,"guid":"198095988ad26f21","id":15086,"image_height":null,"image_url":null,"image_width":null,"interacted_at":"2012-08-03T15:02:59Z","likes_count":2,"o_embed_cache_id":null,"objectId":null,"object_url":null,"pending":false,"processed_image":null,"provider_display_name":null,"public":true,"random_string":null,"remote_photo_name":null,"remote_photo_path":null,"reshares_count":0,"root_guid":"1b2a98db23582947","status_message_guid":null,"text":null,"unprocessed_image":null,"updated_at":"2012-08-03T15:02:59Z"}}],"comments_count":0,"likes_count":6,"reshares_count":1}},"title":"A post from Florian Staudacher","next_post":"/posts/15086/next","previous_post":"/posts/15086/previous","interactions":{"likes":[],"reshares":[],"comments_count":0,"likes_count":2,"reshares_count":0,"comments":[]}},{"id":14755,"guid":"0ffef04549e81bfa","text":"... in case you ever need the network device name, ip and mac address, here you go:  \r\nhttps://gist.github.com/3202188\r\n\r\n(uses ifconfig, grep and sed with some regular expression magic)  \r\n#bash #script #network #ip #grep #sed #regexp #linux","public":true,"created_at":"2012-07-29T22:28:17Z","interacted_at":"2012-08-01T18:01:49Z","provider_display_name":null,"post_type":"StatusMessage","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"o_embed_cache":null,"mentioned_people":[],"photos":[],"frame_name":"note","root":null,"title":"... in case you ever need the network device name, ip and mac address, here you go:  \r\nhttps://gist.github.com/3202188\r\n\r\n(uses ifconfig, grep and sed with some regular expression magic)  \r\n#bash #script #network #ip #grep #sed #regexp #linux","next_post":"/posts/14755/next","previous_post":"/posts/14755/previous","interactions":{"likes":[],"reshares":[],"comments_count":8,"likes_count":4,"reshares_count":0,"comments":[{"id":20912,"guid":"ba86c52ca4d293c4","text":"It only shows network devices named eth* and doesn't work with localized versions of ifconfig in  non-english language environments","author":{"id":6243,"guid":"c7bf295dae900b7a","name":"Florian Diesch","diaspora_id":"diesch@joindiaspora.com","avatar":{"small":"https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_small_7f090bd1002004896464.png","medium":"https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_medium_7f090bd1002004896464.png","large":"https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_large_7f090bd1002004896464.png"}},"created_at":"2012-07-30T02:33:06Z"},{"id":21012,"guid":"81fc5d869de5ea05","text":"For now, I only need it just the way it is (in my collection of VM management scripts), but feel free to change it to work with whatever version or language of `ifconfig` you need. I leave that \"as an exercise to the reader\" ... it's always a good time to start learning `sed` regular expressions  \n;)","author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"created_at":"2012-07-31T01:51:24Z"},{"id":21164,"guid":"d74aac53420cd66f","text":"[inxi](https://code.google.com/p/inxi/)","author":{"id":3920,"guid":"b636315dc6f90ece","name":"Kiridesce","diaspora_id":"iridesce@kosmospora.net","avatar":{"small":"https://kosmospora.net/uploads/images/thumb_small_7b3c16e2107449bf9717.jpeg","medium":"https://kosmospora.net/uploads/images/thumb_medium_7b3c16e2107449bf9717.jpeg","large":"https://kosmospora.net/uploads/images/thumb_large_7b3c16e2107449bf9717.jpeg"}},"created_at":"2012-08-01T18:01:49Z"}]}},{"id":14514,"guid":"c6b5e0a20421d719","text":"lol!  \r\nhttp://youtu.be/6RrpGgaT5kk\r\n\r\n#acapella #movie #dub","public":true,"created_at":"2012-07-27T14:09:31Z","interacted_at":"2012-07-28T21:25:56Z","provider_display_name":null,"post_type":"StatusMessage","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"o_embed_cache":{"data":{"provider_url":"http://www.youtube.com/","thumbnail_url":"http://i3.ytimg.com/vi/6RrpGgaT5kk/hqdefault.jpg","title":"'The Matrix' Lobby Scene with A capella Multitrack - Matt Mulholland","html":"<iframe width=\"420\" height=\"236\" src=\"http://www.youtube.com/embed/6RrpGgaT5kk?fs=1&feature=oembed\" frameborder=\"0\" allowfullscreen></iframe>","author_name":"mattmulholland26","height":236,"thumbnail_width":480,"width":420,"version":"1.0","author_url":"http://www.youtube.com/user/mattmulholland26","provider_name":"YouTube","type":"video","thumbnail_height":360,"trusted_endpoint_url":"http://www.youtube.com/oembed"}},"mentioned_people":[],"photos":[],"frame_name":"status","root":null,"title":"lol!  \r\nhttp://youtu.be/6RrpGgaT5kk\r\n\r\n#acapella #movie #dub","next_post":"/posts/14514/next","previous_post":"/posts/14514/previous","interactions":{"likes":[],"reshares":[],"comments_count":1,"likes_count":2,"reshares_count":0,"comments":[{"id":20833,"guid":"3c2d21708b6cfa29","text":"Inception Trailer A Capella Re-Dub: http://www.youtube.com/watch?v=d2yD4yDsiP4","author":{"id":2896,"guid":"24e82915d58368fe","name":"Alexey Andreyev","diaspora_id":"yetanotherandreyev@diasp.org","avatar":{"small":"https://diasp.org/uploads/images/thumb_small_9f29c5326741a32889fa.jpg","medium":"https://diasp.org/uploads/images/thumb_medium_9f29c5326741a32889fa.jpg","large":"https://diasp.org/uploads/images/thumb_large_9f29c5326741a32889fa.jpg"}},"created_at":"2012-07-28T21:25:56Z"}]}},{"id":14113,"guid":"4404d1bb88d36735","text":"Keep Calm and use #Linux <br> [ ![Image](http://farm5.staticflickr.com/4146/5051936082_3eb4a9f065_b.jpg) ](http://goo.gl/HSS18) <br>","public":true,"created_at":"2012-07-23T15:50:00Z","interacted_at":"2012-07-24T15:16:25Z","provider_display_name":null,"post_type":"Reshare","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"o_embed_cache":null,"mentioned_people":[],"photos":[],"frame_name":"status","root":{"id":14099,"guid":"d1970bb173aae310","text":"Keep Calm and use #Linux <br> [ ![Image](http://farm5.staticflickr.com/4146/5051936082_3eb4a9f065_b.jpg) ](http://goo.gl/HSS18) <br>","public":true,"created_at":"2012-07-23T13:12:51Z","interacted_at":"2012-07-23T13:37:24Z","provider_display_name":null,"post_type":"StatusMessage","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":175,"guid":"4d11bd252c174338f2002a4c","name":"\u24b6\u24c5\u24c4\u24c1\u24c4\u24c3\u24be\u24c8 \u2301 \u24b6\u24c5\u24bd\u24c7\u24c4\u24b9\u24be\u24c8\u24be\u24b6","diaspora_id":"apolonisaphrodisia@joindiaspora.com","avatar":{"small":"https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_small_8107d3419ac23bd16253.gif","medium":"https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_medium_8107d3419ac23bd16253.gif","large":"https://pod.fulll.name/images/user/default.png"}},"o_embed_cache":null,"mentioned_people":[],"photos":[],"frame_name":"status","root":null,"title":"Keep Calm and use #Linux <br> [ ![Image](http://farm5.staticflickr.com/4146/5051936082_3eb4a9f065_b.jpg) ](http://goo.gl/HSS18) <br>","next_post":"/posts/14099/next","previous_post":"/posts/14099/previous","interactions":{"likes":[],"reshares":[],"comments_count":0,"likes_count":0,"reshares_count":2}},"title":"A post from Florian Staudacher","next_post":"/posts/14113/next","previous_post":"/posts/14113/previous","interactions":{"likes":[],"reshares":[],"comments_count":0,"likes_count":2,"reshares_count":1,"comments":[]}},{"id":14110,"guid":"bb89c419e60fd801","text":"awesome #youtube #video  \r\nhttp://youtu.be/daVDrGsaDME\r\n\r\n#car #engine #stopmotion","public":true,"created_at":"2012-07-23T15:05:36Z","interacted_at":"2012-07-24T12:48:48Z","provider_display_name":null,"post_type":"StatusMessage","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"o_embed_cache":{"data":{"provider_url":"http://www.youtube.com/","thumbnail_url":"http://i1.ytimg.com/vi/daVDrGsaDME/hqdefault.jpg","title":"11 Months, 3000 pictures and a lot of coffee.","html":"<iframe width=\"420\" height=\"315\" src=\"http://www.youtube.com/embed/daVDrGsaDME?fs=1&feature=oembed\" frameborder=\"0\" allowfullscreen></iframe>","author_name":"nothinghereok","height":315,"thumbnail_width":480,"width":420,"version":"1.0","author_url":"http://www.youtube.com/user/nothinghereok","provider_name":"YouTube","type":"video","thumbnail_height":360,"trusted_endpoint_url":"http://www.youtube.com/oembed"}},"mentioned_people":[],"photos":[],"frame_name":"status","root":null,"title":"awesome #youtube #video  \r\nhttp://youtu.be/daVDrGsaDME\r\n\r\n#car #engine #stopmotion","next_post":"/posts/14110/next","previous_post":"/posts/14110/previous","interactions":{"likes":[],"reshares":[],"comments_count":0,"likes_count":1,"reshares_count":0,"comments":[]}},{"id":12830,"guid":"5a4089375be2db14","text":"jQuery Core: Version 1.9 and Beyond - http://blog.jquery.com/2012/06/28/jquery-core-version-1-9-and-beyond/ -  \r\n_jQuery 2.0: This version will support the same APIs as jQuery 1.9 does, but removes support for IE 6/7/8 oddities such as borked event model, IE7 \u201cattroperties\u201d, HTML5 shims, etc.  \r\nOur goal is for 1.9 and 2.0 to be interchangeable as far as the API set they support. When 2.0 comes out, your decision on which version to choose should be as simple as this: If you need IE 6/7/8 support, choose 1.9; otherwise you can use either 1.9 or 2.0._  \r\nI hope IE dies a quick but painfull death...  \r\n#jquery #ie #browser #web","public":true,"created_at":"2012-07-13T20:36:35Z","interacted_at":"2012-07-13T20:36:35Z","provider_display_name":null,"post_type":"StatusMessage","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"o_embed_cache":null,"mentioned_people":[],"photos":[],"frame_name":"note","root":null,"title":"jQuery Core: Version 1.9 and Beyond - http://blog.jquery.com/2012/06/28/jquery-core-version-1-9-and-beyond/ -  \r\n_jQuery 2.0: This version will support the same APIs as jQuery 1.9 does, but removes support for IE 6/7/8 oddities such as borked event model, IE7 \u201cattroperties\u201d, HTML5 shims, etc.  \r\nOur goal is for 1.9 and 2.0 to be interchangeable as far as the API set they support. When 2.0 comes out, your decision on which version to choose should be as simple as this: If you need IE 6/7/8 support, choose 1.9; otherwise you can use either 1.9 or 2.0._  \r\nI hope IE dies a quick but painfull death...  \r\n#jquery #ie #browser #web","next_post":"/posts/12830/next","previous_post":"/posts/12830/previous","interactions":{"likes":[],"reshares":[],"comments_count":0,"likes_count":0,"reshares_count":0,"comments":[]}},{"id":12763,"guid":"82adaf03843115e8","text":"http://www.evolutionoftheweb.com\r\n\r\n![www](http://2.bp.blogspot.com/-wsNl1RvehSs/T_7DBHg_o6I/AAAAAAAAAYg/UL2N8GMWO3k/s640/evolution+of+web.png)\r\n\r\n#www #web #ITNews #Browser #Internet #technology #IT","public":true,"created_at":"2012-07-13T09:30:02Z","interacted_at":"2012-07-29T23:46:30Z","provider_display_name":null,"post_type":"Reshare","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"o_embed_cache":null,"mentioned_people":[],"photos":[],"frame_name":"status","root":{"id":12751,"guid":"389f84ae16581df6","text":"http://www.evolutionoftheweb.com\r\n\r\n![www](http://2.bp.blogspot.com/-wsNl1RvehSs/T_7DBHg_o6I/AAAAAAAAAYg/UL2N8GMWO3k/s640/evolution+of+web.png)\r\n\r\n#www #web #ITNews #Browser #Internet #technology #IT","public":true,"created_at":"2012-07-12T17:34:10Z","interacted_at":"2012-07-13T05:49:09Z","provider_display_name":null,"post_type":"StatusMessage","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":4079,"guid":"bfe281001b5a8561","name":"Anonymiss","diaspora_id":"anonymiss@despora.de","avatar":{"small":"https://despora.de/uploads/images/thumb_small_d25c7b27e7bbf307a8cc.jpg","medium":"https://despora.de/uploads/images/thumb_medium_d25c7b27e7bbf307a8cc.jpg","large":"https://despora.de/uploads/images/thumb_large_d25c7b27e7bbf307a8cc.jpg"}},"o_embed_cache":null,"mentioned_people":[],"photos":[],"frame_name":"status","root":null,"title":"http://www.evolutionoftheweb.com\r\n\r\n![www](http://2.bp.blogspot.com/-wsNl1RvehSs/T_7DBHg_o6I/AAAAAAAAAYg/UL2N8GMWO3k/s640/evolution+of+web.png)\r\n\r\n#www #web #ITNews #Browser #Internet #technology #IT","next_post":"/posts/12751/next","previous_post":"/posts/12751/previous","interactions":{"likes":[],"reshares":[],"comments_count":0,"likes_count":0,"reshares_count":1}},"title":"A post from Florian Staudacher","next_post":"/posts/12763/next","previous_post":"/posts/12763/previous","interactions":{"likes":[],"reshares":[],"comments_count":0,"likes_count":2,"reshares_count":0,"comments":[]}},{"id":12463,"guid":"cb0a304194c719d8","text":"Relativistic Baseball - http://what-if.xkcd.com/1/ -  \r\nWhat would happen if you tried to hit a baseball pitched at 90% the speed of light?  \r\n#xkcd #whatif","public":true,"created_at":"2012-07-10T09:31:54Z","interacted_at":"2012-07-29T23:52:08Z","provider_display_name":null,"post_type":"StatusMessage","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"o_embed_cache":null,"mentioned_people":[],"photos":[],"frame_name":"status","root":null,"title":"Relativistic Baseball - http://what-if.xkcd.com/1/ -  \r\nWhat would happen if you tried to hit a baseball pitched at 90% the speed of light?  \r\n#xkcd #whatif","next_post":"/posts/12463/next","previous_post":"/posts/12463/previous","interactions":{"likes":[],"reshares":[],"comments_count":0,"likes_count":3,"reshares_count":1,"comments":[]}},{"id":12349,"guid":"b16efb0fc6427338","text":"yay, new \"simon's cat\"!  \r\n  \r\nhttp://youtu.be/XrivBjlv6Mw  \r\n#simonscat #cat","public":true,"created_at":"2012-07-09T12:03:38Z","interacted_at":"2012-07-10T21:59:32Z","provider_display_name":null,"post_type":"StatusMessage","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"o_embed_cache":{"data":{"provider_url":"http://www.youtube.com/","thumbnail_url":"http://i1.ytimg.com/vi/XrivBjlv6Mw/hqdefault.jpg","title":"Simon's Cat in 'Window Pain'","html":"<iframe width=\"420\" height=\"236\" src=\"http://www.youtube.com/embed/XrivBjlv6Mw?fs=1&feature=oembed\" frameborder=\"0\" allowfullscreen></iframe>","author_name":"simonscat","height":236,"thumbnail_width":480,"width":420,"version":"1.0","author_url":"http://www.youtube.com/user/simonscat","provider_name":"YouTube","type":"video","thumbnail_height":360,"trusted_endpoint_url":"http://www.youtube.com/oembed"}},"mentioned_people":[],"photos":[],"frame_name":"status","root":null,"title":"yay, new \"simon's cat\"!  \r\n  \r\nhttp://youtu.be/XrivBjlv6Mw  \r\n#simonscat #cat","next_post":"/posts/12349/next","previous_post":"/posts/12349/previous","interactions":{"likes":[],"reshares":[],"comments_count":0,"likes_count":2,"reshares_count":1,"comments":[]}},{"id":12172,"guid":"198034364c7226a1","text":"Ex-Nokia staff to build MeeGo-based smartphones - http://www.theverge.com/2012/7/7/3143099/jolla-meego-startup-ex-nokia-employees -  \r\n_A group of ex-Nokia staff and MeeGo enthusiasts has formed Jolla (Finnish for \"dinghy\"), a mobile startup with the aim of bringing new MeeGo devices to the market._  \r\nThank you, thank you so much!\r\n#nokia #meego #maemo #mer #linux #smartphone","public":true,"created_at":"2012-07-07T22:16:11Z","interacted_at":"2012-07-09T11:02:08Z","provider_display_name":null,"post_type":"StatusMessage","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"o_embed_cache":null,"mentioned_people":[],"photos":[],"frame_name":"note","root":null,"title":"Ex-Nokia staff to build MeeGo-based smartphones - http://www.theverge.com/2012/7/7/3143099/jolla-meego-startup-ex-nokia-employees -  \r\n_A group of ex-Nokia staff and MeeGo enthusiasts has formed Jolla (Finnish for \"dinghy\"), a mobile startup with the aim of bringing new MeeGo devices to the market._  \r\nThank you, thank you so much!\r\n#nokia #meego #maemo #mer #linux #smartphone","next_post":"/posts/12172/next","previous_post":"/posts/12172/previous","interactions":{"likes":[],"reshares":[],"comments_count":5,"likes_count":9,"reshares_count":3,"comments":[{"id":18837,"guid":"e70d7b0bbb779547","text":"Can they join efforts with Mer and PlasmaActive? I don't really see a need to reinvent the wheel.","author":{"id":1864,"guid":"6d48d8a46633e586","name":"Shmerl","diaspora_id":"bahaltener@joindiaspora.com","avatar":{"small":"https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_small_7d3b625db04eca524c67.png","medium":"https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_medium_7d3b625db04eca524c67.png","large":"https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_large_7d3b625db04eca524c67.png"}},"created_at":"2012-07-08T02:30:40Z"},{"id":18842,"guid":"421e799bef69f18b","text":"Looks like they do work with Mer. Good news!","author":{"id":1864,"guid":"6d48d8a46633e586","name":"Shmerl","diaspora_id":"bahaltener@joindiaspora.com","avatar":{"small":"https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_small_7d3b625db04eca524c67.png","medium":"https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_medium_7d3b625db04eca524c67.png","large":"https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_large_7d3b625db04eca524c67.png"}},"created_at":"2012-07-08T06:02:18Z"},{"id":18944,"guid":"16320b7c377ebb5a","text":"Tizen has normal Linux stack (X.org or Wayland based), so if you build all the dependencies, you can run Qt based programs there. The downside will be, that Qt isn't included in Tizen by default so far. They promote using EFL.","author":{"id":1864,"guid":"6d48d8a46633e586","name":"Shmerl","diaspora_id":"bahaltener@joindiaspora.com","avatar":{"small":"https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_small_7d3b625db04eca524c67.png","medium":"https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_medium_7d3b625db04eca524c67.png","large":"https://joindiaspora.s3.amazonaws.com/uploads/images/thumb_large_7d3b625db04eca524c67.png"}},"created_at":"2012-07-09T02:59:06Z"}]}},{"id":11937,"guid":"2aad765debb1e80e","text":"to all podmins:  \r\nplease read this announcement: https://groups.google.com/d/msg/diaspora-dev/kMOuJk5h_v4/5Gx1Dsib6EQJ  \r\nthis hopefully provides the solution to clean the database from even the most stubborn mixed-case hashtags.  \r\n#diaspora #podmin #hashtags #actionrequired","public":true,"created_at":"2012-07-06T11:56:30Z","interacted_at":"2012-07-06T16:32:38Z","provider_display_name":null,"post_type":"StatusMessage","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"o_embed_cache":null,"mentioned_people":[],"photos":[],"frame_name":"note","root":null,"title":"to all podmins:  \r\nplease read this announcement: https://groups.google.com/d/msg/diaspora-dev/kMOuJk5h_v4/5Gx1Dsib6EQJ  \r\nthis hopefully provides the solution to clean the database from even the most stubborn mixed-case hashtags.  \r\n#diaspora #podmin #hashtags #actionrequired","next_post":"/posts/11937/next","previous_post":"/posts/11937/previous","interactions":{"likes":[],"reshares":[],"comments_count":3,"likes_count":2,"reshares_count":1,"comments":[{"id":18691,"guid":"8a907544696e4faf","text":"thanks!","author":{"id":365,"guid":"dfc51824b3a76b71","name":"Sven Fischer","diaspora_id":"strubbl@sxspora.de","avatar":{"small":"http://sxspora.de/uploads/images/thumb_small_5c105bceab19eff9b0a3.jpg","medium":"http://sxspora.de/uploads/images/thumb_medium_5c105bceab19eff9b0a3.jpg","large":"http://sxspora.de/uploads/images/thumb_large_5c105bceab19eff9b0a3.jpg"}},"created_at":"2012-07-06T14:53:56Z"},{"id":18695,"guid":"8547aa6d2738ecb4","text":"before 2589. now of course 0. I prepended the bundle command with RAILS_ENV=production DB=\"mysql\". Otherwise it didn't work because a diaspora_development does not exist.","author":{"id":365,"guid":"dfc51824b3a76b71","name":"Sven Fischer","diaspora_id":"strubbl@sxspora.de","avatar":{"small":"http://sxspora.de/uploads/images/thumb_small_5c105bceab19eff9b0a3.jpg","medium":"http://sxspora.de/uploads/images/thumb_medium_5c105bceab19eff9b0a3.jpg","large":"http://sxspora.de/uploads/images/thumb_large_5c105bceab19eff9b0a3.jpg"}},"created_at":"2012-07-06T15:10:44Z"},{"id":18704,"guid":"247b0520a7824450","text":"oh, sorry ... yeah I thought that was implied","author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"created_at":"2012-07-06T16:32:38Z"}]}},{"id":11934,"guid":"e75e4e4719bf9405","text":"qtruby is intriguing ... I think I'll need to build something with it ;)  \r\n(writing this from a QWebView created by a ruby script ^^)  \r\n#ruby #qt #programming","public":true,"created_at":"2012-07-06T11:15:04Z","interacted_at":"2012-07-06T11:15:05Z","provider_display_name":null,"post_type":"StatusMessage","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"o_embed_cache":null,"mentioned_people":[],"photos":[],"frame_name":"status","root":null,"title":"qtruby is intriguing ... I think I'll need to build something with it ;)  \r\n(writing this from a QWebView created by a ruby script ^^)  \r\n#ruby #qt #programming","next_post":"/posts/11934/next","previous_post":"/posts/11934/previous","interactions":{"likes":[],"reshares":[],"comments_count":0,"likes_count":0,"reshares_count":0,"comments":[]}},{"id":11782,"guid":"23416f5cd259bfcc","text":"can one or more podmins please test this pull request on a *copy* of their database? -> https://github.com/diaspora/diaspora/pull/3434  \r\nit's about hashtags mit mixed-case letters in them, and the PR ccontains some changes to the rake task that is supposed to clean those up, which should hopefully eliminate mixed-case hashtags one and for all.  \r\nto verify the successful run, the rake task should complete and in your database there should be no more mixed-case hashtags. You can check this by running this statement before and after the rake task ran:  \r\n\r\n    SELECT * FROM tags WHERE LOWER(name) != name\r\n\r\nBefore, you should see a list of all hashtags that will be processed, and after, the query shoud return an empty result.  \r\n\r\n#diaspora #podmin #pleasetest #hashtags","public":true,"created_at":"2012-07-05T10:01:50Z","interacted_at":"2012-07-08T19:18:00Z","provider_display_name":null,"post_type":"StatusMessage","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"o_embed_cache":null,"mentioned_people":[],"photos":[],"frame_name":"note","root":null,"title":"can one or more podmins please test this pull request on a *copy* of their database? -> https://github.com/diaspora/diaspora/pull/3434  \r\nit's about hashtags mit mixed-case letters in them, and the PR ccontains some changes to the rake task that is supposed to clean those up, which should hopefully eliminate mixed-case hashtags one and for all.  \r\nto verify the successful run, the rake task should complete and in your database there should be no more mixed-case hashtags. You can check this by running this statement before and after the rake task ran:  \r\n\r\n    SELECT * FROM tags WHERE LOWER(name) != name\r\n\r\nBefore, you should see a list of all hashtags that will be processed, and after, the query shoud return an empty result.  \r\n\r\n#diaspora #podmin #pleasetest #hashtags","next_post":"/posts/11782/next","previous_post":"/posts/11782/previous","interactions":{"likes":[],"reshares":[],"comments_count":6,"likes_count":2,"reshares_count":0,"comments":[{"id":18584,"guid":"217ad7b7ab5fa869","text":"Oh! Duhh! Sorry, let me merge that and try again.","author":{"id":5653,"guid":"7410329c39e6810f","name":"Hans","diaspora_id":"hans@hfase.com","avatar":{"small":"https://hfase.com/uploads/images/thumb_small_f2b2d6b041732c5f91eb.jpg","medium":"https://hfase.com/uploads/images/thumb_medium_f2b2d6b041732c5f91eb.jpg","large":"https://hfase.com/uploads/images/thumb_large_f2b2d6b041732c5f91eb.jpg"}},"created_at":"2012-07-05T10:36:46Z"},{"id":18586,"guid":"0268792e018c3ec3","text":"\"MySQL returned an empty result set (i.e. zero rows). ( Query took 0.0003 sec )\"\n\nMuch better! :D Thanks!!","author":{"id":5653,"guid":"7410329c39e6810f","name":"Hans","diaspora_id":"hans@hfase.com","avatar":{"small":"https://hfase.com/uploads/images/thumb_small_f2b2d6b041732c5f91eb.jpg","medium":"https://hfase.com/uploads/images/thumb_medium_f2b2d6b041732c5f91eb.jpg","large":"https://hfase.com/uploads/images/thumb_large_f2b2d6b041732c5f91eb.jpg"}},"created_at":"2012-07-05T10:39:12Z"},{"id":18587,"guid":"8b39d807abd7302e","text":"yeah, that looks good!","author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"created_at":"2012-07-05T10:44:19Z"}]}},{"id":11774,"guid":"dbcb53c18a1c40bc","text":"# Intro To Using Diaspora\\*\r\n\r\n## Federated Social Networking\r\n\r\nDiaspora\\* is a social network (socnet), similar in many ways to Facebook, #MySpace, #Orkut, and Google Plus ( #GPlus). In fact, those of us who were already using D\\* when GPlus came out were quite familiar with its layout and functionality. It was almost as if they had started developing by grabbing D\\* code and stripping out federation.\r\n\r\nWhen I say federated, I mean that there is not one central Diaspora\\* server (or server cluster) that all users belong to. Instead, there are many [Diaspora\\* servers](http://podupti.me/) to choose from, with different operators ( #podmin), privacy policies, terms of service, and so on. Federation works much like when you decide to mail someone. It doesn't matter to me whether you use Gmail, Hotmail, Ymail, or GMX. I can send messages to you because electronic mail is federated. It is the same way with Diaspora\\*. You may be on [JoinDiaspora](http://joindiaspora.com/), [Calispora](http://calispora.org/), [Diasp.org](http://diasp.org/), [Diasp.eu](http://diasp.eu/), [Serendipitous](http://ser.endipito.us/) or another pod. You can still connect to people whose accounts are on other pods.\r\n\r\nI have written before about [federation](https://joindiaspora.com/posts/1679098).\r\n\r\nThis is an advantage, because it means that you're not beholden to a single organization's policies. If you decide that you dislike the _podmin_ on Pod X, you can open an account on Pod Y instead or even set up your own pod. (_**Moving** your account is not yet implemented_, but I believe you can export your contacts and use the export to help you repopulate that list on your new pod.) If podmin X decides to shut down pod X, again you can open an account on another pod or host your own.\r\n\r\n## @ mentions\r\n\r\nHit the at-sign and the first few letters of the person's display name (it used to be the first few of the person's username, but then they decided to hide that ... personally, I wish they'd switch back)\r\n\r\nWhen you mention someone, make sure you set the privacy to include the group that person is in. There was a bug (possibly fixed) where you could mention someone in a post they weren't allowed to see. I do not believe that @ mentions work in comments yet.\r\n\r\nTwitter, where at-mentions were invented (by users and 3rd-party clients) doesn't have the problem of at-mentions affecting groups simply because it does not have any form of privacy groups.\r\n\r\n## Hashtags\r\n\r\nDiaspora\\* supports #hashtags. Because your pod intercepts them, being on a bigger pod means that clicking a hashtag will give a larger results set than if you clicked on the hashtag from a smaller pod. It is a known problem of the current federation mechanism, and is being fixed.\r\n\r\nTwitter, where hashtags were invented (by users and 3rd-party clients), doesn't have this problem only because everyone is one the same instance of T. #StatusNet, which is like a federated clone of #Twitter, also has the same issue to some degree.\r\n\r\n## Aspects\r\n\r\nPrivacy groups for posts; these were the obvious inspiration for #GPlus's circles, and they work similarly. For example, you may wish to place your boss and others that you know from work into a work aspect. You may also wish to place people you know from college, church, or other such activities into aspects specific to their roles in your life, and to place family members into aspects specific to people in that role.\r\n\r\nIf you didn't already understand aspects, consider this: if posts are wide-open, anyone who becomes a contact can see them. So if you have your boss as a contact, and you post a photo of your trip to the beach won a day you called in sick, _you may get fired for stupidity_. What you do is you put your boss into a work aspect, and only post things into that aspect that are acceptable in a work context.\r\n\r\n## Posting syntax\r\n\r\nDiaspora\\* uses something called [Markdown](http://www.simpleeditions.com/59001/markdown-an-introduction) for its posts. Most of the time, you can just post in plain text and not worry about it, but every once in a while, Markdown will distort what you've posted.\r\n\r\nMarkdown does give you the ability to _italicize_, **bold**, and otherwise decorate text and to embed links and images using a fairly simple syntax. I find, however, that I have to look up embedding every time I use it.\r\n\r\n(I personally prefer [Textile](http://textile.thresholdstate.com/). You still have to learn to use it effectively, but it more closely matches what experienced net users have grown to expect from applications like Outlook and Thunderbird. For instance, if I want bold text, surround it with single asterisks [\\*] rather than the double asterisks [\\*\\*] that Markdown requires.)\r\n\r\n## Pods\r\n\r\nA Diaspora\\* pod is the server or server cluster where your account resides. There are dozens or even hundreds of pods out there. Most of them are pretty similar in what they offer. A few offer experimental features, such as post previews, pod-only posts, or encrypted messaging. It is my hope that many of these features will be picked up by the main codebase, so that all pods will have them.\r\n\r\nYou'll rarely need to know this, but every Diaspora\\* account has an address that looks like username@podname.com. If you want people to be able to add you as a contact, publish your Diaspora\\* address. They'll be able to add you that way.\r\n\r\n## Facebook\r\n\r\nAll of the pods I have used have the ability to connect to certain external accounts, such as Twitter and #Facebook. This means that you can post from D\\* to FB or T. You don't have to abandon your \"friends\" on other #socnets because you join D\\*.\r\n\r\nIf you read many online articles, you will come across some that seem to believe that Diaspora\\*'s purpose is to become a Facebook-killer. Do not believe them. If and when people tire of Facebook, it will be because of something that FB does, not because socnet X is better. If you look at D\\* as a substitute for Facebook, it will be like a meat-eater who tries to replace meat with soy-based meat substitutes. You won't like it. Instead, I recommend that you get to know people who are on D\\* and that you invite your existing contacts, but that you **enjoy D\\* for its own value**. If you find that it then makes FB unnecessary, that is good. If, on the other hand, you still want to keep your FB account, that is also good.\r\n\r\n## Controversies\r\n\r\nThere are occasional squabbles over the directions the project is taking. Unlike the squabbles at Twitter, which took place behind closed doors and resulted in a number of highly-skilled people leaving and the recently announced restrictions on how client applications can display Twitter-sourced content, Diaspora\\*'s squabbles tend to happen in public. My advice is simple: stay out of the squabbles, find your own philosophical point of view, and support this and any other project that agrees with that point of view. If the time comes when this or any other project no longer fits your POV, leave quietly.\r\n\r\nWhen I felt that GPlus was hostile to my POV, I closed my accounts. When I felt that Facebook was hostile to my POV, I closed my account. I do not go around trash-talking either project, or assuming that anyone in said projects is intentionally \"evil,\" and I would not recommend doing that to D\\* or any other project.\r\n\r\n## Future\r\n\r\nAt some point in the future, the Diaspora\\* developers will be changing the federation protocol. Federation is what enables a user on Pod X to interact with users on pods Y, Z, etc. They are working to improve scalability (ability to handle more content posted from more users in the same period of time) and content dispersion (ability for content to travel between a wider number of pods seamlessly). It is a tough task. If you are interested in #Ruby programming or Ruby on Rails ( #RoR ), I would encourage you to get involved.\r\n\r\nThey are also planning to make D\\* a far more visual-oriented socnet. That means that posts with images, graphics, and video will be far more interesting, and will be displayed in a manner that caters to those things. There is an experimental pod where they test out many of the visual designs that may make it into the D* codebase. I will not link it here, because people may misunderstand that it is experimental and not really intended to be your home pod.\r\n\r\nIf you're interested in the technical side and the future directions, they have a moderated and directed code-chat on IRC every (other?) Thursday at 10AM Pacific in the room #diaspora-meeting on Freenode. Sean can jump in on the comments to correct me on this.\r\n\r\n## Conclusion\r\n\r\nThis is long, but I think this is a good intro to Diaspora\\*. I wish there had been someone who could write something like this when I joined. I should also put in a disclaimer. This is my personal opinion, and not the official stance of any podmin or of the Diaspora\\* developers. You are free to disagree, but please start a new thread for it. This is posted in the hope that people who newly join Diaspora\\* will get a head start.\r\n\r\nThere are a number of tutorials at [Diasporal](http://diasporial.com/). I would encourage you to visit the site and check them out. If you are a blogger, or if you write for a magazine (online or dead-tree), I would encourage you to write about Diaspora\\* once you've taken some time to get to know the place.","public":true,"created_at":"2012-07-05T09:37:15Z","interacted_at":"2012-07-05T09:37:15Z","provider_display_name":null,"post_type":"Reshare","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"o_embed_cache":null,"mentioned_people":[],"photos":[],"frame_name":"status","root":{"id":11730,"guid":"57288b4adf721900","text":"# Intro To Using Diaspora\\*\r\n\r\n## Federated Social Networking\r\n\r\nDiaspora\\* is a social network (socnet), similar in many ways to Facebook, #MySpace, #Orkut, and Google Plus ( #GPlus). In fact, those of us who were already using D\\* when GPlus came out were quite familiar with its layout and functionality. It was almost as if they had started developing by grabbing D\\* code and stripping out federation.\r\n\r\nWhen I say federated, I mean that there is not one central Diaspora\\* server (or server cluster) that all users belong to. Instead, there are many [Diaspora\\* servers](http://podupti.me/) to choose from, with different operators ( #podmin), privacy policies, terms of service, and so on. Federation works much like when you decide to mail someone. It doesn't matter to me whether you use Gmail, Hotmail, Ymail, or GMX. I can send messages to you because electronic mail is federated. It is the same way with Diaspora\\*. You may be on [JoinDiaspora](http://joindiaspora.com/), [Calispora](http://calispora.org/), [Diasp.org](http://diasp.org/), [Diasp.eu](http://diasp.eu/), [Serendipitous](http://ser.endipito.us/) or another pod. You can still connect to people whose accounts are on other pods.\r\n\r\nI have written before about [federation](https://joindiaspora.com/posts/1679098).\r\n\r\nThis is an advantage, because it means that you're not beholden to a single organization's policies. If you decide that you dislike the _podmin_ on Pod X, you can open an account on Pod Y instead or even set up your own pod. (_**Moving** your account is not yet implemented_, but I believe you can export your contacts and use the export to help you repopulate that list on your new pod.) If podmin X decides to shut down pod X, again you can open an account on another pod or host your own.\r\n\r\n## @ mentions\r\n\r\nHit the at-sign and the first few letters of the person's display name (it used to be the first few of the person's username, but then they decided to hide that ... personally, I wish they'd switch back)\r\n\r\nWhen you mention someone, make sure you set the privacy to include the group that person is in. There was a bug (possibly fixed) where you could mention someone in a post they weren't allowed to see. I do not believe that @ mentions work in comments yet.\r\n\r\nTwitter, where at-mentions were invented (by users and 3rd-party clients) doesn't have the problem of at-mentions affecting groups simply because it does not have any form of privacy groups.\r\n\r\n## Hashtags\r\n\r\nDiaspora\\* supports #hashtags. Because your pod intercepts them, being on a bigger pod means that clicking a hashtag will give a larger results set than if you clicked on the hashtag from a smaller pod. It is a known problem of the current federation mechanism, and is being fixed.\r\n\r\nTwitter, where hashtags were invented (by users and 3rd-party clients), doesn't have this problem only because everyone is one the same instance of T. #StatusNet, which is like a federated clone of #Twitter, also has the same issue to some degree.\r\n\r\n## Aspects\r\n\r\nPrivacy groups for posts; these were the obvious inspiration for #GPlus's circles, and they work similarly. For example, you may wish to place your boss and others that you know from work into a work aspect. You may also wish to place people you know from college, church, or other such activities into aspects specific to their roles in your life, and to place family members into aspects specific to people in that role.\r\n\r\nIf you didn't already understand aspects, consider this: if posts are wide-open, anyone who becomes a contact can see them. So if you have your boss as a contact, and you post a photo of your trip to the beach won a day you called in sick, _you may get fired for stupidity_. What you do is you put your boss into a work aspect, and only post things into that aspect that are acceptable in a work context.\r\n\r\n## Posting syntax\r\n\r\nDiaspora\\* uses something called [Markdown](http://www.simpleeditions.com/59001/markdown-an-introduction) for its posts. Most of the time, you can just post in plain text and not worry about it, but every once in a while, Markdown will distort what you've posted.\r\n\r\nMarkdown does give you the ability to _italicize_, **bold**, and otherwise decorate text and to embed links and images using a fairly simple syntax. I find, however, that I have to look up embedding every time I use it.\r\n\r\n(I personally prefer [Textile](http://textile.thresholdstate.com/). You still have to learn to use it effectively, but it more closely matches what experienced net users have grown to expect from applications like Outlook and Thunderbird. For instance, if I want bold text, surround it with single asterisks [\\*] rather than the double asterisks [\\*\\*] that Markdown requires.)\r\n\r\n## Pods\r\n\r\nA Diaspora\\* pod is the server or server cluster where your account resides. There are dozens or even hundreds of pods out there. Most of them are pretty similar in what they offer. A few offer experimental features, such as post previews, pod-only posts, or encrypted messaging. It is my hope that many of these features will be picked up by the main codebase, so that all pods will have them.\r\n\r\nYou'll rarely need to know this, but every Diaspora\\* account has an address that looks like username@podname.com. If you want people to be able to add you as a contact, publish your Diaspora\\* address. They'll be able to add you that way.\r\n\r\n## Facebook\r\n\r\nAll of the pods I have used have the ability to connect to certain external accounts, such as Twitter and #Facebook. This means that you can post from D\\* to FB or T. You don't have to abandon your \"friends\" on other #socnets because you join D\\*.\r\n\r\nIf you read many online articles, you will come across some that seem to believe that Diaspora\\*'s purpose is to become a Facebook-killer. Do not believe them. If and when people tire of Facebook, it will be because of something that FB does, not because socnet X is better. If you look at D\\* as a substitute for Facebook, it will be like a meat-eater who tries to replace meat with soy-based meat substitutes. You won't like it. Instead, I recommend that you get to know people who are on D\\* and that you invite your existing contacts, but that you **enjoy D\\* for its own value**. If you find that it then makes FB unnecessary, that is good. If, on the other hand, you still want to keep your FB account, that is also good.\r\n\r\n## Controversies\r\n\r\nThere are occasional squabbles over the directions the project is taking. Unlike the squabbles at Twitter, which took place behind closed doors and resulted in a number of highly-skilled people leaving and the recently announced restrictions on how client applications can display Twitter-sourced content, Diaspora\\*'s squabbles tend to happen in public. My advice is simple: stay out of the squabbles, find your own philosophical point of view, and support this and any other project that agrees with that point of view. If the time comes when this or any other project no longer fits your POV, leave quietly.\r\n\r\nWhen I felt that GPlus was hostile to my POV, I closed my accounts. When I felt that Facebook was hostile to my POV, I closed my account. I do not go around trash-talking either project, or assuming that anyone in said projects is intentionally \"evil,\" and I would not recommend doing that to D\\* or any other project.\r\n\r\n## Future\r\n\r\nAt some point in the future, the Diaspora\\* developers will be changing the federation protocol. Federation is what enables a user on Pod X to interact with users on pods Y, Z, etc. They are working to improve scalability (ability to handle more content posted from more users in the same period of time) and content dispersion (ability for content to travel between a wider number of pods seamlessly). It is a tough task. If you are interested in #Ruby programming or Ruby on Rails ( #RoR ), I would encourage you to get involved.\r\n\r\nThey are also planning to make D\\* a far more visual-oriented socnet. That means that posts with images, graphics, and video will be far more interesting, and will be displayed in a manner that caters to those things. There is an experimental pod where they test out many of the visual designs that may make it into the D* codebase. I will not link it here, because people may misunderstand that it is experimental and not really intended to be your home pod.\r\n\r\nIf you're interested in the technical side and the future directions, they have a moderated and directed code-chat on IRC every (other?) Thursday at 10AM Pacific in the room #diaspora-meeting on Freenode. Sean can jump in on the comments to correct me on this.\r\n\r\n## Conclusion\r\n\r\nThis is long, but I think this is a good intro to Diaspora\\*. I wish there had been someone who could write something like this when I joined. I should also put in a disclaimer. This is my personal opinion, and not the official stance of any podmin or of the Diaspora\\* developers. You are free to disagree, but please start a new thread for it. This is posted in the hope that people who newly join Diaspora\\* will get a head start.\r\n\r\nThere are a number of tutorials at [Diasporal](http://diasporial.com/). I would encourage you to visit the site and check them out. If you are a blogger, or if you write for a magazine (online or dead-tree), I would encourage you to write about Diaspora\\* once you've taken some time to get to know the place.","public":true,"created_at":"2012-07-04T23:41:33Z","interacted_at":"2012-07-05T04:21:21Z","provider_display_name":null,"post_type":"StatusMessage","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":5508,"guid":"25d1ca8dd064f3dd","name":"lnxwalt@calispora.org","diaspora_id":"lnxwalt@calispora.org","avatar":{"small":"https://pod.fulll.name/images/user/default.png","medium":"https://pod.fulll.name/images/user/default.png","large":"https://pod.fulll.name/images/user/default.png"}},"o_embed_cache":null,"mentioned_people":[],"photos":[],"frame_name":"note","root":null,"title":"# Intro To Using Diaspora\\*\r\n\r\n## Federated Social Networking\r\n\r\nDiaspora\\* is a social network (socnet), similar in many ways to Facebook, #MySpace, #Orkut, and Google Plus ( #GPlus). In fact, those of us who were already using D\\* when GPlus came out were quite familiar with its layout and functionality. It was almost as if they had started developing by grabbing D\\* code and stripping out federation.\r\n\r\nWhen I say federated, I mean that there is not one central Diaspora\\* server (or server cluster) that all users belong to. Instead, there are many [Diaspora\\* servers](http://podupti.me/) to choose from, with different operators ( #podmin), privacy policies, terms of service, and so on. Federation works much like when you decide to mail someone. It doesn't matter to me whether you use Gmail, Hotmail, Ymail, or GMX. I can send messages to you because electronic mail is federated. It is the same way with Diaspora\\*. You may be on [JoinDiaspora](http://joindiaspora.com/), [Calispora](http://calispora.org/), [Diasp.org](http://diasp.org/), [Diasp.eu](http://diasp.eu/), [Serendipitous](http://ser.endipito.us/) or another pod. You can still connect to people whose accounts are on other pods.\r\n\r\nI have written before about [federation](https://joindiaspora.com/posts/1679098).\r\n\r\nThis is an advantage, because it means that you're not beholden to a single organization's policies. If you decide that you dislike the _podmin_ on Pod X, you can open an account on Pod Y instead or even set up your own pod. (_**Moving** your account is not yet implemented_, but I believe you can export your contacts and use the export to help you repopulate that list on your new pod.) If podmin X decides to shut down pod X, again you can open an account on another pod or host your own.\r\n\r\n## @ mentions\r\n\r\nHit the at-sign and the first few letters of the person's display name (it used to be the first few of the person's username, but then they decided to hide that ... personally, I wish they'd switch back)\r\n\r\nWhen you mention someone, make sure you set the privacy to include the group that person is in. There was a bug (possibly fixed) where you could mention someone in a post they weren't allowed to see. I do not believe that @ mentions work in comments yet.\r\n\r\nTwitter, where at-mentions were invented (by users and 3rd-party clients) doesn't have the problem of at-mentions affecting groups simply because it does not have any form of privacy groups.\r\n\r\n## Hashtags\r\n\r\nDiaspora\\* supports #hashtags. Because your pod intercepts them, being on a bigger pod means that clicking a hashtag will give a larger results set than if you clicked on the hashtag from a smaller pod. It is a known problem of the current federation mechanism, and is being fixed.\r\n\r\nTwitter, where hashtags were invented (by users and 3rd-party clients), doesn't have this problem only because everyone is one the same instance of T. #StatusNet, which is like a federated clone of #Twitter, also has the same issue to some degree.\r\n\r\n## Aspects\r\n\r\nPrivacy groups for posts; these were the obvious inspiration for #GPlus's circles, and they work similarly. For example, you may wish to place your boss and others that you know from work into a work aspect. You may also wish to place people you know from college, church, or other such activities into aspects specific to their roles in your life, and to place family members into aspects specific to people in that role.\r\n\r\nIf you didn't already understand aspects, consider this: if posts are wide-open, anyone who becomes a contact can see them. So if you have your boss as a contact, and you post a photo of your trip to the beach won a day you called in sick, _you may get fired for stupidity_. What you do is you put your boss into a work aspect, and only post things into that aspect that are acceptable in a work context.\r\n\r\n## Posting syntax\r\n\r\nDiaspora\\* uses something called [Markdown](http://www.simpleeditions.com/59001/markdown-an-introduction) for its posts. Most of the time, you can just post in plain text and not worry about it, but every once in a while, Markdown will distort what you've posted.\r\n\r\nMarkdown does give you the ability to _italicize_, **bold**, and otherwise decorate text and to embed links and images using a fairly simple syntax. I find, however, that I have to look up embedding every time I use it.\r\n\r\n(I personally prefer [Textile](http://textile.thresholdstate.com/). You still have to learn to use it effectively, but it more closely matches what experienced net users have grown to expect from applications like Outlook and Thunderbird. For instance, if I want bold text, surround it with single asterisks [\\*] rather than the double asterisks [\\*\\*] that Markdown requires.)\r\n\r\n## Pods\r\n\r\nA Diaspora\\* pod is the server or server cluster where your account resides. There are dozens or even hundreds of pods out there. Most of them are pretty similar in what they offer. A few offer experimental features, such as post previews, pod-only posts, or encrypted messaging. It is my hope that many of these features will be picked up by the main codebase, so that all pods will have them.\r\n\r\nYou'll rarely need to know this, but every Diaspora\\* account has an address that looks like username@podname.com. If you want people to be able to add you as a contact, publish your Diaspora\\* address. They'll be able to add you that way.\r\n\r\n## Facebook\r\n\r\nAll of the pods I have used have the ability to connect to certain external accounts, such as Twitter and #Facebook. This means that you can post from D\\* to FB or T. You don't have to abandon your \"friends\" on other #socnets because you join D\\*.\r\n\r\nIf you read many online articles, you will come across some that seem to believe that Diaspora\\*'s purpose is to become a Facebook-killer. Do not believe them. If and when people tire of Facebook, it will be because of something that FB does, not because socnet X is better. If you look at D\\* as a substitute for Facebook, it will be like a meat-eater who tries to replace meat with soy-based meat substitutes. You won't like it. Instead, I recommend that you get to know people who are on D\\* and that you invite your existing contacts, but that you **enjoy D\\* for its own value**. If you find that it then makes FB unnecessary, that is good. If, on the other hand, you still want to keep your FB account, that is also good.\r\n\r\n## Controversies\r\n\r\nThere are occasional squabbles over the directions the project is taking. Unlike the squabbles at Twitter, which took place behind closed doors and resulted in a number of highly-skilled people leaving and the recently announced restrictions on how client applications can display Twitter-sourced content, Diaspora\\*'s squabbles tend to happen in public. My advice is simple: stay out of the squabbles, find your own philosophical point of view, and support this and any other project that agrees with that point of view. If the time comes when this or any other project no longer fits your POV, leave quietly.\r\n\r\nWhen I felt that GPlus was hostile to my POV, I closed my accounts. When I felt that Facebook was hostile to my POV, I closed my account. I do not go around trash-talking either project, or assuming that anyone in said projects is intentionally \"evil,\" and I would not recommend doing that to D\\* or any other project.\r\n\r\n## Future\r\n\r\nAt some point in the future, the Diaspora\\* developers will be changing the federation protocol. Federation is what enables a user on Pod X to interact with users on pods Y, Z, etc. They are working to improve scalability (ability to handle more content posted from more users in the same period of time) and content dispersion (ability for content to travel between a wider number of pods seamlessly). It is a tough task. If you are interested in #Ruby programming or Ruby on Rails ( #RoR ), I would encourage you to get involved.\r\n\r\nThey are also planning to make D\\* a far more visual-oriented socnet. That means that posts with images, graphics, and video will be far more interesting, and will be displayed in a manner that caters to those things. There is an experimental pod where they test out many of the visual designs that may make it into the D* codebase. I will not link it here, because people may misunderstand that it is experimental and not really intended to be your home pod.\r\n\r\nIf you're interested in the technical side and the future directions, they have a moderated and directed code-chat on IRC every (other?) Thursday at 10AM Pacific in the room #diaspora-meeting on Freenode. Sean can jump in on the comments to correct me on this.\r\n\r\n## Conclusion\r\n\r\nThis is long, but I think this is a good intro to Diaspora\\*. I wish there had been someone who could write something like this when I joined. I should also put in a disclaimer. This is my personal opinion, and not the official stance of any podmin or of the Diaspora\\* developers. You are free to disagree, but please start a new thread for it. This is posted in the hope that people who newly join Diaspora\\* will get a head start.\r\n\r\nThere are a number of tutorials at [Diasporal](http://diasporial.com/). I would encourage you to visit the site and check them out. If you are a blogger, or if you write for a magazine (online or dead-tree), I would encourage you to write about Diaspora\\* once you've taken some time to get to know the place.","next_post":"/posts/11730/next","previous_post":"/posts/11730/previous","interactions":{"likes":[],"reshares":[],"comments_count":0,"likes_count":0,"reshares_count":4}},"title":"A post from Florian Staudacher","next_post":"/posts/11774/next","previous_post":"/posts/11774/previous","interactions":{"likes":[],"reshares":[],"comments_count":0,"likes_count":0,"reshares_count":0,"comments":[]}},{"id":11725,"guid":"909471c6070243be","text":"If you think you know of a #Diaspora #Bug please remember to be as specific as possible when describing it so we can help!!","public":true,"created_at":"2012-07-04T23:29:43Z","interacted_at":"2012-07-04T23:29:43Z","provider_display_name":null,"post_type":"Reshare","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":2,"guid":"7445f9a0a6c28ebb","name":"Florian Staudacher","diaspora_id":"raven24@pod.fulll.name","avatar":{"small":"https://pod.fulll.name/uploads/images/thumb_small_5f612f44a0a026b119f8.png","medium":"https://pod.fulll.name/uploads/images/thumb_medium_5f612f44a0a026b119f8.png","large":"https://pod.fulll.name/uploads/images/thumb_large_5f612f44a0a026b119f8.png"}},"o_embed_cache":null,"mentioned_people":[],"photos":[],"frame_name":"status","root":{"id":11718,"guid":"c1770c590b097c28","text":"If you think you know of a #Diaspora #Bug please remember to be as specific as possible when describing it so we can help!!","public":true,"created_at":"2012-07-04T22:00:49Z","interacted_at":"2012-07-05T08:19:07Z","provider_display_name":null,"post_type":"StatusMessage","image_url":null,"object_url":null,"favorite":false,"nsfw":false,"author":{"id":5653,"guid":"7410329c39e6810f","name":"Hans","diaspora_id":"hans@hfase.com","avatar":{"small":"https://hfase.com/uploads/images/thumb_small_f2b2d6b041732c5f91eb.jpg","medium":"https://hfase.com/uploads/images/thumb_medium_f2b2d6b041732c5f91eb.jpg","large":"https://hfase.com/uploads/images/thumb_large_f2b2d6b041732c5f91eb.jpg"}},"o_embed_cache":null,"mentioned_people":[],"photos":[],"frame_name":"status","root":null,"title":"If you think you know of a #Diaspora #Bug please remember to be as specific as possible when describing it so we can help!!","next_post":"/posts/11718/next","previous_post":"/posts/11718/previous","interactions":{"likes":[],"reshares":[{"reshare":{"actor_url":null,"author_id":2,"comments_count":0,"created_at":"2012-07-04T23:29:43Z","diaspora_handle":"raven24@pod.fulll.name","favorite":false,"frame_name":null,"guid":"909471c6070243be","id":11725,"image_height":null,"image_url":null,"image_width":null,"interacted_at":"2012-07-04T23:29:43Z","likes_count":0,"o_embed_cache_id":null,"objectId":null,"object_url":null,"pending":false,"processed_image":null,"provider_display_name":null,"public":true,"random_string":null,"remote_photo_name":null,"remote_photo_path":null,"reshares_count":0,"root_guid":"c1770c590b097c28","status_message_guid":null,"text":null,"unprocessed_image":null,"updated_at":"2012-07-04T23:29:43Z"}}],"comments_count":0,"likes_count":2,"reshares_count":2}},"title":"A post from Florian Staudacher","next_post":"/posts/11725/next","previous_post":"/posts/11725/previous","interactions":{"likes":[],"reshares":[],"comments_count":0,"likes_count":0,"reshares_count":0,"comments":[]}}]
+
+/home/gopi/Development/diaspora/spec/helpers/people_helper_spec.rb:
+   40      end
+   41  
+   42:     it 'uses diaspora handle if the person has no first or last name' do
+   43        @person.profile.first_name = nil
+   44        @person.profile.last_name = nil
+   ..
+   47      end
+   48  
+   49:     it 'uses diaspora handle if first name and first name are rails#blank?' do
+   50        @person.profile.first_name = " "
+   51        @person.profile.last_name = " "
+
+/home/gopi/Development/diaspora/spec/javascripts/app/views/help_view_spec.js:
+    5  
+    6    beforeEach(function(){
+    7:     Diaspora.I18n.load({"tutorials":"tutorials","tutorial":"tutorial","irc":"IRC","wiki":"wiki","markdown":"Markdown","here":"here","foundation_website":"diaspora foundation website","third_party_tools":"third party tools","getting_started_tutorial":"'Getting started' tutorial series","getting_help":{"title":"Getting help","getting_started_q":"Help! I need some basic help to get me started!","getting_started_a":"You're in luck. Try the %{tutorial_series} on our project site. It will take you step-by-step through the registration process and teach you all the basic things you need to know about using diaspora*.","get_support_q":"What if my question is not answered in this FAQ? Where else can I get support?","get_support_a_website":"visit our %{link}","get_support_a_tutorials":"check out our %{tutorials}","get_support_a_wiki":"search the %{link}","get_support_a_irc":"join us on %{irc} (Live chat)","get_support_a_hashtag":"ask in a public post on diaspora* using the %{question} hashtag"},"account_and_data_management":{"title":"Account and data management","move_pods_q":"How do I move my seed (account) from one pod to another?","move_pods_a":"In the future you will be able to export your seed from a pod and import it on another, but this is not currently possible. You could always open a new account and add your contacts to aspects on that new seed, and ask them to add your new seed to their aspects.","download_data_q":"Can I download a copy of all of my data contained in my seed (account)?","download_data_a":"Yes. At the bottom of the Account tab of your settings page there are two buttons for downloading your data.","close_account_q":"How do I delete my seed (account)?","close_account_a":"Go to the bottom of your settings page and click the Close Account button.","data_visible_to_podmin_q":"How much of my information can my pod administrator see?","data_visible_to_podmin_a":"Communication *between* pods is always encrypted (using SSL and diaspora*'s own transport encryption), but the storage of data on pods is not encrypted. If they wanted to, the database administrator for your pod (usually the person running the pod) could access all your profile data and everything that you post (as is the case for most websites that store user data). Running your own pod provides more privacy since you then control access to the database.","data_other_podmins_q":"Can the administrators of other pods see my information?","data_other_podmins_a":"Once you are sharing with someone on another pod, any posts you share with them and a copy of your profile data are stored (cached) on their pod, and are accessible to that pod's database administrator. When you delete a post or profile data it is deleted from your pod and any other pods where it had previously been stored."},"aspects":{"title":"Aspects","what_is_an_aspect_q":"What is an aspect?","what_is_an_aspect_a":"Aspects are the way you group your contacts on diaspora*. An aspect is one of the faces you show to the world. It might be who you are at work, or who you are to your family, or who you are to your friends in a club you belong to.","who_sees_post_q":"When I post to an aspect, who sees it?","who_sees_post_a":"If you make a limited post, it will only be visible the people you have put in that aspect (or those aspects, if it is made to multiple aspects). Contacts you have that aren't in the aspect have no way of seeing the post, unless you've made it public. Only public posts will ever be visible to anyone who you haven't placed into one of your aspects.","restrict_posts_i_see_q":"Can I restrict the posts I see to just those from certain aspects?","restrict_posts_i_see_a":"Yes. Click on My Aspects in the side-bar and then click individual aspects in the list to select or deselect them. Only the posts by people in the selected aspects will appear in your stream.","contacts_know_aspect_q":"Do my contacts know which aspects I have put them in?","contacts_know_aspect_a":"No. They cannot see the name of the aspect under any circumstances.","contacts_visible_q":"What does \"make contacts in this aspect visible to each other\" mean?","contacts_visible_a":"If you check this option then contacts from that aspect will be able to see who else is in it, on your profile page under your picture. It's best to select this option only if the contacts in that aspect all know each other. They still won't be able to see what the aspect is called.","remove_notification_q":"If I remove someone from an aspect, or all of my aspects, are they notified of this?","remove_notification_a":"No.","rename_aspect_q":"Can I rename an aspect?","rename_aspect_a":"Yes. In your list of aspects on the left side of the main page, point your mouse at the aspect you want to rename. Click the little 'edit' pencil that appears to the right. Click rename in the box that appears.","change_aspect_of_post_q":"Once I have posted something, can I change the aspect(s) that can see it?","change_aspect_of_post_a":"No, but you can always make a new post with the same content and post it to a different aspect.","post_multiple_aspects_q":"Can I post content to multiple aspects at once?","post_multiple_aspects_a":"Yes. When you are making a post, use the aspect selector button to select or deselect aspects. Your post will be visible to all the aspects you select. You could also select the aspects you want to post to in the side-bar. When you post, the aspect(s) that you have selected in the list on the left will automatically be selected in the aspect selector when you start to make a new post.","person_multiple_aspects_q":"Can I add a person to multiple aspects?","person_multiple_aspects_a":"Yes. Go to your contacts page and click my contacts. For each contact you can use the menu on the right to add them to (or remove them from) as many aspects as you want. Or you can add them to a new aspect (or remove them from an aspect) by clicking the aspect selector button on their profile page. Or you can even just move the pointer over their name where you see it in the stream, and a 'hover-card' will appear. You can change the aspects they are in right there.","delete_aspect_q":"How do I delete an aspect?","delete_aspect_a":"In your list of aspects on the left side of the main page, point your mouse at the aspect you want to delete. Click the little 'edit' pencil that appears on the right. Click the delete button in the box that appears."},"mentions":{"title":"Mentions","what_is_a_mention_q":"What is a \"mention\"?","what_is_a_mention_a":"A mention is a link to a person's profile page that appears in a post. When someone is mentioned they receive a notification that calls their attention to the post.","how_to_mention_q":"How do I mention someone when making a post?","how_to_mention_a":"Type the \"@\" sign and start typing their name. A drop down menu should appear to let you select them more easily. Note that it is only possible to mention people you have added to an aspect.","mention_in_comment_q":"Can I mention someone in a comment?","mention_in_comment_a":"No, not currently.","see_mentions_q":"Is there a way to see the posts in which I have been mentioned?","see_mentions_a":"Yes, click \"Mentions\" in the left hand column on your home page."},"pods":{"title":"Pods","what_is_a_pod_q":"What is a pod?","what_is_a_pod_a":"A pod is a server running the diaspora* software and connected to the diaspora* network. \"Pod\" is a metaphor referring to pods on plants which contain seeds, in the way that a server contains a number of user accounts. There are many different pods. You can add friends from other pods and communicate with them. (You can think of a diaspora* pod as similar to an email provider: there are public pods, private pods, and with some effort you can even run your own).","find_people_q":"I just joined a pod, how can I find people to share with?","find_people_a":"Invite your friends using the email link in the side-bar. Follow #tags to discover others who share your interests, and add those who post things that interest you to an aspect. Shout out that you're #newhere in a public post.","use_search_box_q":"How do I use the search box to find particular individuals?","use_search_box_a":"If you know their full diaspora* ID (e.g. username@podname.org), you can find them by searching for it. If you are on the same pod you can search for just their username. An alternative is to search for them by their profile name (the name you see on screen). If a search does not work the first time, try it again."},"posts_and_posting":{"title":"Posts and posting","hide_posts_q":"How do I hide a post? / How do I stop getting notifications about a post that I commented on?","hide_posts_a":"If you point your mouse at the top of a post, an X appears on the right. Click it to hide the post and mute notifications about it. You can still see the post if you visit the profile page of the person who posted it.","format_text_q":"How can I format the text in my posts (bold, italics, etc.)?","format_text_a":"By using a simplified system called %{markdown}. You can find the full Markdown syntax %{here}. The preview button is really helpful here, as you can see how your message will look before you share it.","insert_images_q":"How do I insert images into posts?","insert_images_a":"Click the little camera icon to insert an image into a post. Press the photo icon again to add another photo, or you can select multiple photos to upload in one go.","insert_images_comments_q":"Can I insert images into comments?","insert_images_comments_a1":"The following Markdown code","image_text":"image text","image_url":"image url","insert_images_comments_a2":"can be used to insert images from the web into comments as well as posts.","size_of_images_q":"Can I customize the size of images in posts or comments?","size_of_images_a":"No. Images are resized automatically to fit the stream. Markdown does not have a code for specifying the size of an image.","embed_multimedia_q":"How do I embed a video, audio, or other multimedia content into a post?","embed_multimedia_a":"You can usually just paste the URL (e.g. http://www.youtube.com/watch?v=nnnnnnnnnnn ) into your post and the video or audio will be embedded automatically. Some of the sites that are supported are: YouTube, Vimeo, SoundCloud, Flickr and a few more. diaspora* uses oEmbed for this feature. We're supporting new sites all the time. Remember to always post simple, full links: no shortened links; no operators after the base URL; and give it a little time before you refresh the page after posting for seeing the preview.","character_limit_q":"What is the character limit for posts?","character_limit_a":"65,535 characters. That's 65,395 more characters than you get on Twitter! ;)","char_limit_services_q":"What is the character limit for posts shared through a connected service with a smaller character count?","char_limit_services_a":"In that case your post is limited to the smaller character count (140 in the case of Twitter; 1000 in the case of Tumblr), and the number of characters you have left to use is displayed when that service's icon is highlighted. You can still post to these services if your post is longer than their limit, but the text is truncated on those services.","stream_full_of_posts_q":"Why is my stream full of posts from people I don't know and don't share with?","stream_full_of_posts_a1":"Your stream is made up of three types of posts:","stream_full_of_posts_li1":"Posts by people you are sharing with, which come in two types: public posts and limited posts shared with an aspect that you are part of. To remove these posts from your stream, simply stop sharing with the person.","stream_full_of_posts_li2":"Public posts containing one of the tags that you follow. To remove these, stop following the tag.","stream_full_of_posts_li3":"Public posts by people listed in the Community Spotlight. These can be removed by unchecking the “Show Community Spotlight in Stream?” option in the Account tab of your Settings."},"private_posts":{"title":"Private posts","who_sees_post_q":"When I post a message to an aspect (i.e., a private post), who can see it?","who_sees_post_a":"Only logged-in diaspora* users you have placed in that aspect can see your private post.","can_comment_q":"Who can comment on or like my private post?","can_comment_a":"Only logged-in diaspora* users you have placed in that aspect can comment on or like your private post.","can_reshare_q":"Who can reshare my private post?","can_reshare_a":"Nobody. Private posts are not resharable. Logged-in diaspora* users in that aspect can potentially copy and paste it, however.","see_comment_q":"When I comment on or like a private post, who can see it?","see_comment_a":"Only the people that the post was shared with (the people who are in the aspects selected by the original poster) can see its comments and likes. "},"private_profiles":{"title":"Private profiles","who_sees_profile_q":"Who sees my private profile?","who_sees_profile_a":"Any logged-in user that you are sharing with (meaning, you have added them to one of your aspects). However, people following you, but whom you do not follow, will see only your public information.","whats_in_profile_q":"What's in my private profile?","whats_in_profile_a":"Biography, location, gender, and birthday. It's the stuff in the bottom section of the edit profile page. All this information is optional – it's up to you whether you fill it in. Logged-in users who you have added to your aspects are the only people who can see your private profile. They will also see the private posts that made to the aspect(s) they are in, mixed in with your public posts, when they visit your profile page.","who_sees_updates_q":"Who sees updates to my private profile?","who_sees_updates_a":"Anyone in your aspects sees changes to your private profile. "},"public_posts":{"title":"Public posts","who_sees_post_q":"When I post something publicly, who can see it?","who_sees_post_a":"Anyone using the internet can potentially see a post you mark public, so make sure you really do want your post to be public. It's a great way of reaching out to the world.","find_public_post_q":"How can other people find my public post?","find_public_post_a":"Your public posts will appear in the streams of anyone following you. If you included #tags in your public post, anyone following those tags will find your post in their streams. Every public post also has a specific URL that anyone can view, even if they're not logged in - thus public posts may be linked to directly from Twitter, blogs, etc. Public posts may also be indexed by search engines.","can_comment_reshare_like_q":"Who can comment on, reshare, or like my public post?","can_comment_reshare_like_a":"Any logged-in diaspora* user can comment on, reshare, or like your public post.","see_comment_reshare_like_q":"When I comment on, reshare, or like a public post, who can see it?","see_comment_reshare_like_a":"Any logged-in diaspora* user and anyone else on the internet. Comments, likes, and reshares of public posts are also public.","deselect_aspect_posting_q":"What happens when I deselect one or more aspects when making a public post?","deselect_aspect_posting_a":"Deselecting aspects does not affect a public post. It will still appear in the streams of all of your contacts. To make a post visible only to specific aspects, you need to select those aspects from the button under the publisher."},"public_profiles":{"title":"Public profiles","who_sees_profile_q":"Who sees my public profile?","who_sees_profile_a":"Any logged-in diaspora* user, as well as the wider internet, can see it. Each profile has a direct URL, so it may be linked to directly from outside sites. It may be indexed by search engines.","whats_in_profile_q":"What's in my public profile","whats_in_profile_a":"Your name, the five tags you chose to describe yourself, and your photo. It's the stuff in the top section of the edit profile page. You can make this profile information as identifiable or anonymous as you like. Your profile page also shows any public posts you have made.","who_sees_updates_q":"Who sees updates to my public profile?","who_sees_updates_a":"Anyone can see changes if they visit your profile page.","what_do_tags_do_q":"What do the tags on my public profile do?","what_do_tags_do_a":"They help people get to know you. Your profile picture will also appear on the left-hand side of those particular tag pages, along with anyone else who has them in their public profile."},"resharing_posts":{"title":"Resharing posts","reshare_public_post_aspects_q":"Can I reshare a public post with only certain aspects?","reshare_public_post_aspects_a":"No, when you reshare a public post it automatically becomes one of your public posts. To share it with certain aspects, copy and paste the contents of the post into a new post.","reshare_private_post_aspects_q":"Can I reshare a private post with only certain aspects?","reshare_private_post_aspects_a":"No, it is not possible to reshare a private post. This is to respect the intentions of the original poster who only shared it with a particular group of people."},"sharing":{"title":"Sharing","add_to_aspect_q":"What happens when I add someone to one of my aspects? Or when someone adds me to one of their aspects?","add_to_aspect_a1":"Let's say that Amy adds Ben to an aspect, but Ben has not (yet) added Amy to an aspect:","add_to_aspect_li1":"Ben will receive a notification that Amy has \"started sharing\" with Ben.","add_to_aspect_li2":"Amy will start to see Ben's public posts in her stream.","add_to_aspect_li3":"Amy will not see any of Ben's private posts.","add_to_aspect_li4":"Ben will not see Amy's public or private posts in his stream.","add_to_aspect_li5":"But if Ben goes to Amy's profile page, then he will see Amy's private posts that she makes to her aspect that has him in it (as well as her public posts which anyone can see there).","add_to_aspect_li6":"Ben will be able to see Amy's private profile (bio, location, gender, birthday).","add_to_aspect_li7":"Amy will appear under \"Only sharing with me\" on Ben's contacts page.","add_to_aspect_a2":"This is known as asymmetrical sharing. If and when Ben also adds Amy to an aspect then it would become mutual sharing, with both Amy's and Ben's public posts and relevant private posts appearing in each other's streams, etc. ","only_sharing_q":"Who are the people listed in \"Only sharing with me\" on my contacts page?","only_sharing_a":"These are people that have added you to one of their aspects, but who are not (yet) in any of your aspects. In other words, they are sharing with you, but you are not sharing with them (asymmetrical sharing). If you add them to an aspect, they will then appear under that aspect and not under \"only sharing with you\". See above.","list_not_sharing_q":"Is there a list of people whom I have added to one of my aspects, but who have not added me to one of theirs?","list_not_sharing_a":"No, but you can see whether or not someone is sharing with you by visiting their profile page. If they are, the bar under their profile picture will be green; if not, it'll be grey. You should get a notification each time someone starts sharing with you.","see_old_posts_q":"When I add someone to an aspect, can they see older posts that I have already posted to that aspect?","see_old_posts_a":"No. They will only be able to see new posts to that aspect. They (and everyone else) can see your older public posts on your profile page, and they may also see them in their stream."},"tags":{"title":"Tags","what_are_tags_for_q":"What are tags for?","what_are_tags_for_a":"Tags are a way to categorize a post, usually by topic. Searching for a tag shows all posts with that tag that you can see (both public and private posts). This lets people who are interested in a given topic find public posts about it.","tags_in_comments_q":"Can I put tags in comments or just in posts?","tags_in_comments_a":"A tag added to a comment will still appear as a link to that tag's page, but it will not make that post (or comment) appear on that tag page. This only works for tags in posts.","followed_tags_q":"What are \"#Followed Tags\" and how do I follow a tag?","followed_tags_a":"After searching for a tag you can click the button at the top of the tag's page to \"follow\" that tag. It will then appear in your list of followed tags on the left. Clicking one of your followed tags takes you to that tag's page so you can see recent posts containing that tag. Click on #Followed Tags to see a stream of posts that include one of any of your followed tags. ","people_tag_page_q":"Who are the people listed on the left-hand side of a tag page?","people_tag_page_a":"They are people who have listed that tag to describe themselves in their public profile.","filter_tags_q":"How can I filter/exclude some tags from my stream?","filter_tags_a":"This is not yet available directly through diaspora*, but some %{third_party_tools} have been written that might provide this."},"miscellaneous":{"title":"Miscellaneous","back_to_top_q":"Is there a quick way to go back to the top of a page after I scroll down?","back_to_top_a":"Yes. After scrolling down a page, click on the grey arrow that appears in the bottom right corner of your browser window.","photo_albums_q":"Are there photo or video albums?","photo_albums_a":"No, not currently. However you can view a stream of their uploaded pictures from the Photos section in the side-bar of their profile page.","subscribe_feed_q":"Can I subscribe to someone's public posts with a feed reader?","subscribe_feed_a":"Yes, but this is still not a polished feature and the formatting of the results is still pretty rough. If you want to try it anyway, go to someone's profile page and click the feed button in your browser, or you can copy the profile URL (i.e. https://joindiaspora.com/people/somenumber), and paste it into a feed reader. The resulting feed address looks like this: https://joindiaspora.com/public/username.atom Diaspora uses Atom rather than RSS.","diaspora_app_q":"Is there a diaspora* app for Android or iOS?","diaspora_app_a":"There are several Android apps in very early development. Several are long-abandoned projects and so do not work well with the current version of diaspora*. Don't expect much from these apps at the moment. Currently the best way to access diaspora* from your mobile device is through a browser, because we've designed a mobile version of the site which should work well on all devices. There is currently no app for iOS. Again, diaspora* should work fine via your browser."}}, "en");
+    8      Diaspora.Page = "HelpFaq";
+    9    });
+
+/home/gopi/Development/diaspora/spec/lib/diaspora/exporter_spec.rb:
+  100      end
+  101  
+  102:     it 'includes their diaspora handle' do
+  103        expect(people_xml).to include @user3.person.diaspora_handle
+  104      end
+
+/home/gopi/Development/diaspora/spec/lib/diaspora/message_renderer_spec.rb:
+  135        end
+  136  
+  137:       it "should leave mentions intact for real diaspora handles" do
+  138          new_person = FactoryGirl.create(:person, diaspora_handle: 'maxwell@joindiaspora.com')
+  139          expect(
+
+/home/gopi/Development/diaspora/spec/lib/salmon/slap_spec.rb:
+   82      end
+   83      
+   84:     it "has diaspora as the root" do
+   85        doc = Nokogiri::XML(@xml)
+   86        expect(doc.root.name).to eq("diaspora")
+
+/home/gopi/Development/diaspora/spec/lib/webfinger_profile_spec.rb:
+    8    let(:profile){ WebfingerProfile.new(account, webfinger_profile) }
+    9    
+   10:   context "parsing a diaspora profile" do
+   11      
+   12      describe '#valid_diaspora_profile?' do
+   ..
+   21        end
+   22  
+   23:       it 'should handle a non-diaspora profile without blowing up' do
+   24          expect{ WebfingerProfile.new("evan@status.net", not_diaspora_webfinger)}.not_to raise_error 
+   25        end
+
+/home/gopi/Development/diaspora/spec/models/person_spec.rb:
+  183  
+  184      context 'without first nor last name' do
+  185:       it 'should display their diaspora handle' do
+  186          expect(Person.name_from_attrs(nil, nil, @profile.diaspora_handle)).to eq(@profile.diaspora_handle)
+  187        end
+
+/home/gopi/Development/diaspora/spec/models/photo_spec.rb:
+   50      end
+   51  
+   52:     it 'sets the persons diaspora handle' do
+   53        expect(@photo.diaspora_handle).to eq(@user.person.diaspora_handle)
+   54      end
+
+/home/gopi/Development/diaspora/spec/models/profile_spec.rb:
+   35        end
+   36  
+   37:       it 'outputs a hash that can update a diaspora profile' do
+   38          profile = Profile.new
+   39          expect(profile.from_omniauth_hash(@from_omniauth)['bio']).to eq('this is my bio')
+   ..
+  150      let(:person) {FactoryGirl.build(:person,:diaspora_handle => "foobar" )}
+  151  
+  152:     it 'should include persons diaspora handle' do
+  153        xml = person.profile.to_diaspora_xml
+  154        expect(xml).to include "foobar"
+
+/home/gopi/Development/diaspora/spec/models/user_spec.rb:
+  249        end
+  250  
+  251:       it 'requires uniqueness also amount Person objects with diaspora handle' do
+  252          p = FactoryGirl.create(:person, :diaspora_handle => "jimmy#{User.diaspora_id_host}")
+  253          alice.username = 'jimmy'
+
+~/Development/diaspora/tmp/cache/assets/development/sass/0578d9c6b826c4871c0b548a1e01b645729193ae/*.pngc:
+    <binary>
+
+~/Development/diaspora/tmp/cache/assets/development/sass/77ef938bfa3f07670a3c155117f6e533366ba83a/*.pngc:
+    <binary>
+
+~/Development/diaspora/tmp/cache/assets/development/sass/9a837e09ab4f11ff9c23e77a57228d79b9902f3a/footer.css.scssc:
+    <binary>
+
+~/Development/diaspora/tmp/cache/assets/development/sass/e848b708b917202fb99fe3645e76be64b0c3cc83/footer.css.scssc:
+    <binary>
+
+~/Development/diaspora/tmp/cache/assets/development/sprockets/3fd3785f81a9b6d37ddc609f493e3d94:
+    <binary>
+
+~/Development/diaspora/tmp/cache/assets/development/sprockets/50c1885539f61359c48af74fcae1df31:
+    <binary>
+
+~/Development/diaspora/tmp/cache/assets/development/sprockets/6c3e053393afe303432ca73f1b41490b:
+    <binary>
+
+~/Development/diaspora/tmp/cache/assets/development/sprockets/6d186331a6ae935bcbb9f5f859df9b89:
+    <binary>
+
+~/Development/diaspora/tmp/cache/assets/development/sprockets/c5880aca76ccbb51f9388362e8afc1e6:
+    <binary>
+
+~/Development/diaspora/tmp/cache/assets/development/sprockets/dfc9174a465cae17db4108da24c9566e:
+    <binary>
+
+122 matches across 71 files
